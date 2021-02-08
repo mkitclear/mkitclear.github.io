@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-08T16:14:59.221Z</updated>
+    <updated>2021-02-08T16:22:42.247Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,54 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[有氧运动和无氧运动]]></title>
+        <id>https://mkitclear.github.io/post/you-yang-yun-dong-he-wu-yang-yun-dong/</id>
+        <link href="https://mkitclear.github.io/post/you-yang-yun-dong-he-wu-yang-yun-dong/">
+        </link>
+        <updated>2021-02-08T16:21:16.000Z</updated>
+        <content type="html"><![CDATA[<p>人体有两套供能系统，有氧代谢和无氧代谢。</p>
+<p>「有氧运动」和「无氧运动」的根本区别, 在于他们之间的能量代谢系统不一样。</p>
+<p>有氧代谢能缓慢但持久的提供能量，这个代谢过程主要消耗脂肪和碳水化合物，需要氧气来参与；无氧代谢供能迅速但量极少，主要消耗的是糖，几乎不需要氧气的参与。</p>
+<p>运动时，如果更多的是有氧代谢在供能（燃烧脂肪），这就是有氧运动；如果更多的是无氧代谢在提供能量（燃烧糖），那就是无氧运动。</p>
+<p>因为有氧代谢的供能比较缓慢，当运动强度变大，有氧代谢供能无法满足需要了，无氧代谢供能此时就会占据更大的比例。<br>
+比如同样是跑步，长距离慢跑就是有氧运动，短距离快跑那就是无氧运动。</p>
+<p>有些人天生偏瘦，想强壮肌肉、健美体形，那么应该以无氧训练为主。反之，有些人是「肌肉体质」，很容易就长肌肉，如果想瘦身，那么应该以有氧训练为主。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[好看照片的视觉感受]]></title>
+        <id>https://mkitclear.github.io/post/hao-kan-zhao-pian-de-shi-jue-gan-shou/</id>
+        <link href="https://mkitclear.github.io/post/hao-kan-zhao-pian-de-shi-jue-gan-shou/">
+        </link>
+        <updated>2021-02-08T16:20:19.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>在某些方面趋于统一</li>
+<li>有较为清晰明快的结构特征</li>
+<li>具有意义的对比和冲突</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[什么是好照片]]></title>
+        <id>https://mkitclear.github.io/post/shi-me-shi-hao-zhao-pian/</id>
+        <link href="https://mkitclear.github.io/post/shi-me-shi-hao-zhao-pian/">
+        </link>
+        <updated>2021-02-08T16:18:28.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>
+<p>一幅好照片要有一个鲜明的主题（有时也称之为主体）或者是表现一个人，或者是表现一件事物，甚至可是表现该题材的一个故事情结。主题必须明确，毫不含糊，使任何观赏者一眼就能看出来。</p>
+</li>
+<li>
+<p>一副好照片必须能把注意力引向被摄主体。</p>
+</li>
+<li>
+<p>一幅好照片必须画面简洁，只包括那些有利于把视线引向被摄主体的内容，而排除或压缩那些可能分散注意力的内容。”</p>
+</li>
+</ol>
+<p>—— 《纽约摄影学院摄影教材》</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[换工作小tips]]></title>
         <id>https://mkitclear.github.io/post/huan-gong-zuo-xiao-tips/</id>
