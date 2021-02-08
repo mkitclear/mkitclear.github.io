@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>Gridea</title>
-    <updated>2021-02-08T15:56:10.631Z</updated>
+    <updated>2021-02-08T16:14:59.221Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[换工作小tips]]></title>
+        <id>https://mkitclear.github.io/post/huan-gong-zuo-xiao-tips/</id>
+        <link href="https://mkitclear.github.io/post/huan-gong-zuo-xiao-tips/">
+        </link>
+        <updated>2021-02-08T16:14:39.000Z</updated>
+        <content type="html"><![CDATA[<p>选择上升期的公司<br>
+而不是选择成熟期的公司<br>
+加入公司的核心业务<br>
+而不是边缘业务<br>
+选择有产业理想的老板<br>
+而不是只想赚钱的老板<br>
+新手选择成熟业务<br>
+高手选择新业务<br>
+选择合适自己的竞争环境<br>
+避开惨烈竞争</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Git 学习笔记]]></title>
         <id>https://mkitclear.github.io/post/git-xue-xi-bi-ji/</id>
