@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-02-08T18:27:22.737Z</updated>
+    <title>一种可能</title>
+    <updated>2021-02-08T18:58:52.735Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>For certain you have to be lost to find a place as can&apos;t be found</subtitle>
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, 一种可能</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么要努力读书？]]></title>
+        <id>https://mkitclear.github.io/post/wei-shi-me-yao-nu-li-du-shu/</id>
+        <link href="https://mkitclear.github.io/post/wei-shi-me-yao-nu-li-du-shu/">
+        </link>
+        <updated>2021-02-08T18:43:57.000Z</updated>
+        <summary type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[血槽管理法]]></title>
         <id>https://mkitclear.github.io/post/xie-cao-guan-li-fa/</id>
