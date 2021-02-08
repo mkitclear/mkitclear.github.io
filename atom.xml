@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
-    <title>一种可能</title>
-    <updated>2021-02-08T18:58:52.735Z</updated>
+    <title>MakeItClear</title>
+    <updated>2021-02-08T19:04:45.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
-    <subtitle>For certain you have to be lost to find a place as can&apos;t be found</subtitle>
+    <subtitle>我不知将去向何方，但我已在路上。</subtitle>
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 一种可能</rights>
+    <rights>All rights reserved 2021, MakeItClear</rights>
     <entry>
         <title type="html"><![CDATA[为什么要努力读书？]]></title>
         <id>https://mkitclear.github.io/post/wei-shi-me-yao-nu-li-du-shu/</id>
