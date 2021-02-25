@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-02-25T05:53:03.925Z</updated>
+    <updated>2021-02-25T07:12:51.210Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MakeItClear</rights>
+    <entry>
+        <title type="html"><![CDATA[Chrome 优秀插件「持续更新」]]></title>
+        <id>https://mkitclear.github.io/post/chrome-you-xiu-cha-jian-chi-xu-geng-xin/</id>
+        <link href="https://mkitclear.github.io/post/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
+        </link>
+        <updated>2021-02-25T06:21:27.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chrome 优秀插件]]></title>
+        <id>https://mkitclear.github.io/post/chrome-you-xiu-cha-jian/</id>
+        <link href="https://mkitclear.github.io/post/chrome-you-xiu-cha-jian/">
+        </link>
+        <updated>2021-02-25T06:21:27.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mac 免费效率软件推荐「持续更新」]]></title>
         <id>https://mkitclear.github.io/post/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/</id>
@@ -77,29 +91,5 @@
         <link href="https://mkitclear.github.io/post/huan-gong-zuo-xiao-tips/">
         </link>
         <updated>2021-02-08T16:14:39.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git 学习笔记]]></title>
-        <id>https://mkitclear.github.io/post/git-xue-xi-bi-ji/</id>
-        <link href="https://mkitclear.github.io/post/git-xue-xi-bi-ji/">
-        </link>
-        <updated>2021-02-07T17:06:41.000Z</updated>
-        <summary type="html"><![CDATA[<p>廖雪峰老师<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>真的很不错，花了大概两三个小时过了一遍,受益良多，以记之。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>廖雪峰老师<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>真的很不错，花了大概两三个小时过了一遍,受益良多，以记之。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://mkitclear.github.io/post/hello-gridea/</id>
-        <link href="https://mkitclear.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></content>
     </entry>
 </feed>
