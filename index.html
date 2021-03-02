@@ -1,274 +1,419 @@
-<!DOCTYPE html>
+
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>MakeItClear</title>
+<meta name="description" content="我不知将去向何方，但我已在路上。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671548473">
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671776492">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="我不知将去向何方，但我已在路上。">
-    
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://mkitclear.github.io">
-        <img src="https://mkitclear.github.io/images/avatar.png?v=1614671548473" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://mkitclear.github.io">
+        <img class="avatar" src="https://mkitclear.github.io/images/avatar.png?v=1614671776492" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://mkitclear.github.io">
         <h1 class="site-title">MakeItClear</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      我不知将去向何方，但我已在路上。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
-                  <h2 class="post-title">FastJson 对象、JSON、字符串、Map 之间的互转</h2>
-                </a>
-                <div class="post-date">
-                  2021-03-02
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
-                  <h2 class="post-title">Mac 安装配置Mysql</h2>
-                </a>
-                <div class="post-date">
-                  2021-03-02
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/">
-                  <h2 class="post-title">Mac 安装配置 Miniconda</h2>
-                </a>
-                <div class="post-date">
-                  2021-03-02
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/hyper-and-fish-shell/">
-                  <h2 class="post-title">Hyper &amp; Fish Shell</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-28
-                </div>
-                <div class="post-abstract">
-                  <h2 id="hyper">Hyper</h2>
+      <div class="content-container">
+        
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
+        <h2 class="post-title">FastJson 对象、JSON、字符串、Map 之间的互转</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-03-02</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/DdSg3LJSj/">
+                dev
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
+        <h2 class="post-title">Mac 安装配置Mysql</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-03-02</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/DdSg3LJSj/">
+                dev
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/">
+        <h2 class="post-title">Mac 安装配置 Miniconda</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-03-02</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/DdSg3LJSj/">
+                dev
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/hyper-and-fish-shell/">
+        <h2 class="post-title">Hyper &amp; Fish Shell</h2>
+      </a>
+      <div class="post-abstract">
+        <h2 id="hyper">Hyper</h2>
 <h3 id="简介">简介</h3>
 <blockquote>
 <p>Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。</p>
 </blockquote>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
-                  <h2 class="post-title">Mac 终端提示: The default interactive shell is now zsh.</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-28
-                </div>
-                <div class="post-abstract">
-                  <p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-28</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/eeFB4e3ll/">
+                shell
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://mkitclear.github.io/BSj-bGKCQF/">
+                terminal
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
+        <h2 class="post-title">Mac 终端提示: The default interactive shell is now zsh.</h2>
+      </a>
+      <div class="post-abstract">
+        <p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
 <blockquote>
 <p>官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。</p>
 </blockquote>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
-                  <h2 class="post-title">Chrome 内置二维码功能</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-26
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
-                  <h2 class="post-title">Chrome 优秀插件推荐「持续更新」</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-25
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
-                  <h2 class="post-title">Mac 免费效率软件推荐「持续更新」</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-25
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/">
-                  <h2 class="post-title">为什么要努力读书？</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-09
-                </div>
-                <div class="post-abstract">
-                  <p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-28</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/eeFB4e3ll/">
+                shell
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://mkitclear.github.io/BSj-bGKCQF/">
+                terminal
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mkitclear.github.io/xie-cao-guan-li-fa/">
-                  <h2 class="post-title">血槽管理法</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-09
-                </div>
-                <div class="post-abstract">
-                  <blockquote>
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
+        <h2 class="post-title">Chrome 内置二维码功能</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-26</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/-s3qw8nXo/">
+                Chrome
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://mkitclear.github.io/wmpmFj1oFD/">
+                技巧
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
+        <h2 class="post-title">Chrome 优秀插件推荐「持续更新」</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-25</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/0Qkqh9T5V/">
+                效率
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
+        <h2 class="post-title">Mac 免费效率软件推荐「持续更新」</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-25</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/0Qkqh9T5V/">
+                效率
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/">
+        <h2 class="post-title">为什么要努力读书？</h2>
+      </a>
+      <div class="post-abstract">
+        <p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-09</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/V4OWru3Hm/">
+                教育
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://mkitclear.github.io/G_hfQqz37/">
+                生活
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://mkitclear.github.io/xie-cao-guan-li-fa/">
+        <h2 class="post-title">血槽管理法</h2>
+      </a>
+      <div class="post-abstract">
+        <blockquote>
 <p>注：本文内容来自<a href="%5Bhttps://www.okjike.com%5D(https://www.okjike.com)">即刻</a>用户<a href="https://web.okjike.com/u/9DDEA652-9FC7-4136-91E2-67C12883DF9E">提案鱼</a></p>
 </blockquote>
 
-                </div>
-              </div>
-              
-            </article>
-          
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-02-09</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mkitclear.github.io/4DSvdcxqb/">
+                职场
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
 
-          <div class="pagination-container">
+
+<div class="pagination-container">
   
   
     <a href="https://mkitclear.github.io/page/2" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
   
 </div>
 
-        </div>
+
       </div>
+
+      <div class="site-footer">
+  <div class="slogan">我不知将去向何方，但我已在路上。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
+    <script type="application/javascript">
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
+hljs.initHighlightingOnLoad()
 
 var app = new Vue({
   el: '#app',
@@ -278,8 +423,6 @@ var app = new Vue({
 })
 
 </script>
-
-
 
 
 

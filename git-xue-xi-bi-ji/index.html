@@ -1,14 +1,19 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>Git 学习笔记 | MakeItClear</title>
+<meta name="description" content="我不知将去向何方，但我已在路上。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671548473">
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671776492">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
 
 
@@ -19,97 +24,85 @@
   
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="廖雪峰老师Git教程真的很不错，花了大概两三个小时过了一遍,受益良多，以记之。
-
-
-Git中文手册
-
-本文不再介绍 Git 的安装配置过程和基本的 linux 命令操作。
-初始化仓库
-
-
-首先建一个目录 learngit ，在终端进入到该目..." />
-    <meta name="keywords" content="git" />
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://mkitclear.github.io">
-        <img src="https://mkitclear.github.io/images/avatar.png?v=1614671548473" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://mkitclear.github.io">
+        <img class="avatar" src="https://mkitclear.github.io/images/avatar.png?v=1614671776492" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://mkitclear.github.io">
         <h1 class="site-title">MakeItClear</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      我不知将去向何方，但我已在路上。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Git 学习笔记</h2>
-            <div class="post-date">2021-02-08</div>
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Git 学习笔记</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-08</span>
             
-            <div class="post-content" v-pre>
-              <p>廖雪峰老师<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>真的很不错，花了大概两三个小时过了一遍,受益良多，以记之。</p>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://mkitclear.github.io/2rkkv0jMV/">
+                    git
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>廖雪峰老师<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>真的很不错，花了大概两三个小时过了一遍,受益良多，以记之。</p>
 <!-- more -->
 <ul>
 <li><a href="https://git-scm.com/book/zh">Git中文手册</a></li>
@@ -537,45 +530,51 @@ linux中类似用户的配置文件一样有3层，系统级，用户级，项�
 windows也基本一样，但常常只存在于是用户根目录(C:\User\xxx)，项目目录中。 最下层的覆盖上面的，alias配置也在其中，手动改配置文件也和命令一样。 加了--global选项的，表示配置写到了用户级，--system是系统级，win是在安装目录（如C:\Program Files\Git\mingw64\etc），不加就在项目级</p>
 </blockquote>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://mkitclear.github.io/2rkkv0jMV/" class="tag">
-                    git
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://mkitclear.github.io/hello-gridea/">
-                  <h3 class="post-title">
-                    Hello Gridea
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
           </div>
-
         </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://mkitclear.github.io/hello-gridea/">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
       </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">我不知将去向何方，但我已在路上。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
+    <script type="application/javascript">
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
+hljs.initHighlightingOnLoad()
 
 var app = new Vue({
   el: '#app',
@@ -585,8 +584,6 @@ var app = new Vue({
 })
 
 </script>
-
-
 
 
 

@@ -1,14 +1,19 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>常见面试问题回答技巧（非技术）「转」 | MakeItClear</title>
+<meta name="description" content="我不知将去向何方，但我已在路上。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671548473">
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671776492">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
 
 
@@ -19,89 +24,85 @@
   
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="请你做一下自我介绍？
-回答提示：一般人回答这个问题过于平常，只说姓名、年龄、爱好、工作经验，这些在简历上都有。其实，企业最希望知道的是求职者能否胜任工作，包括：最强的技能、最深入研究的知识领域、性格中最积极的部分、做过的最成功的事，主要的成..." />
-    <meta name="keywords" content="职场" />
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://mkitclear.github.io">
-        <img src="https://mkitclear.github.io/images/avatar.png?v=1614671548473" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://mkitclear.github.io">
+        <img class="avatar" src="https://mkitclear.github.io/images/avatar.png?v=1614671776492" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://mkitclear.github.io">
         <h1 class="site-title">MakeItClear</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      我不知将去向何方，但我已在路上。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">常见面试问题回答技巧（非技术）「转」</h2>
-            <div class="post-date">2021-02-09</div>
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">常见面试问题回答技巧（非技术）「转」</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-09</span>
             
-            <div class="post-content" v-pre>
-              <h3 id="请你做一下自我介绍"><strong>请你做一下自我介绍？</strong></h3>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://mkitclear.github.io/4DSvdcxqb/">
+                    职场
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="请你做一下自我介绍"><strong>请你做一下自我介绍？</strong></h3>
 <p>回答提示：一般人回答这个问题过于平常，只说姓名、年龄、爱好、工作经验，这些在简历上都有。其实，企业最希望知道的是求职者能否胜任工作，包括：最强的技能、最深入研究的知识领域、性格中最积极的部分、做过的最成功的事，主要的成就等，这些回答关于学习或者生活都可以，但要突出积极的个性和做事的能力，说得合情合理企业才会相信。企业很重视一个人的礼貌，求职者要尊重考官，要在自我介绍结束后说一句“谢谢”。</p>
 <h3 id="你觉得你最大的优点是什么"><strong>你觉得你最大的优点是什么？</strong></h3>
 <p>回答提示：沉着冷静、条理清楚、立场坚定、顽强向上、乐于助人和关心他人、适应能力和幽默感、乐观和友爱。要例举具体的优点，如：做事认真、抗压能力强、乐于助人、学习能力强等，然后要举实例证明这也是最重要的一点。</p>
@@ -193,45 +194,51 @@
 <p>回答提示：我首先不会找那位上级领导说明这件事，我会主动找我的主管领导来沟通，因为沟通是解决人际关系的最好办法，但结果会有两种：①我的主管领导认识到自己的错误，我想我会视具体情况决定是否原谅他。②他更加变本加厉的来威胁我，那我会毫不犹豫地找我的上级领导反映此事，因为他这样做会造成负面影响，对今后的工作不利。</p>
 <p>祝你早日找到心仪的工作!</p>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://mkitclear.github.io/4DSvdcxqb/" class="tag">
-                    职场
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://mkitclear.github.io/you-yang-yun-dong-he-wu-yang-yun-dong/">
-                  <h3 class="post-title">
-                    有氧运动和无氧运动
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
           </div>
-
         </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://mkitclear.github.io/you-yang-yun-dong-he-wu-yang-yun-dong/">
+              <h3 class="post-title">
+                下一篇：有氧运动和无氧运动
+              </h3>
+            </a>
+          </div>
+          
       </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">我不知将去向何方，但我已在路上。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
+    <script type="application/javascript">
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
+hljs.initHighlightingOnLoad()
 
 var app = new Vue({
   el: '#app',
@@ -241,8 +248,6 @@ var app = new Vue({
 })
 
 </script>
-
-
 
 
 
