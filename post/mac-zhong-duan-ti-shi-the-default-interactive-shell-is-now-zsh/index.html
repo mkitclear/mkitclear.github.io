@@ -1,10 +1,10 @@
-<html lang="zh">
+<html>
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 - MakeItClear</title>
+<title>Mac 终端提示: The default interactive shell is now zsh. | MakeItClear</title>
 
 <link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614657370170">
 
@@ -25,7 +25,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -86,14 +86,64 @@
 </nav>
 
     <div class="post-container">
-        <div class="post-detail">
+        <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
-                <div class="post-content">
+                <h2 class="post-title">
+                    Mac 终端提示: The default interactive shell is now zsh.
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-02-28 ·
+                    </time>
                     
+                        <a href="https://mkitclear.github.io/tag/eeFB4e3ll/" class="post-tags">
+                            # shell
+                        </a>
+                    
+                        <a href="https://mkitclear.github.io/tag/BSj-bGKCQF/" class="post-tags">
+                            # terminal
+                        </a>
+                    
+                        <a href="https://mkitclear.github.io/tag/1FccN9RRjB/" class="post-tags">
+                            # 终端
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
+<blockquote>
+<p>官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。</p>
+</blockquote>
+<!-- more -->
+<p>如果想用 zsh shell 的话，按终端提示操作即可。如果不想用 zsh shell ，可以先看系统支持的 shell 有哪些。</p>
+<pre><code class="language-bash">more /etc/shells
+</code></pre>
+<p>选一个自己喜欢的，以常见的 bash 为例，先切换到 root 用户</p>
+<pre><code class="language-bash">sudo -s
+</code></pre>
+<p>再将系统默认的 shell 换成 bash</p>
+<pre><code class="language-bash">chsh -s /bin/bash
+</code></pre>
+<p>最后</p>
+<pre><code class="language-bash"> vim ~/.bash_profile
+</code></pre>
+<p>将 <code>export BASH_SILENCE_DEPRECATION_WARNING=1</code> 加在 <code>.bash_profile</code> 文件末尾 ，防止提示再次出现。</p>
+
                 </div>
             </article>
         </div>
-        <br>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mkitclear.github.io/post/chrome-nei-zhi-er-wei-ma-gong-neng/" class="post-title gt-a-link">
+                    Chrome 内置二维码功能
+                </a>
+            </div>
+        
+
+        
+
         
             
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
@@ -140,11 +190,11 @@
 </script>
 
             
+
             
         
 
         
-
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">我不知将去向何方，但我已在路上。</div>

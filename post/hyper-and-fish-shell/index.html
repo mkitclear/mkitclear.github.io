@@ -1,10 +1,10 @@
-<html lang="zh">
+<html>
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 - MakeItClear</title>
+<title>Hyper &amp; Fish Shell | MakeItClear</title>
 
 <link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614657370170">
 
@@ -25,7 +25,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -86,14 +86,116 @@
 </nav>
 
     <div class="post-container">
-        <div class="post-detail">
+        <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
-                <div class="post-content">
+                <h2 class="post-title">
+                    Hyper &amp; Fish Shell
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-02-28 ·
+                    </time>
                     
+                        <a href="https://mkitclear.github.io/tag/eeFB4e3ll/" class="post-tags">
+                            # shell
+                        </a>
+                    
+                        <a href="https://mkitclear.github.io/tag/BSj-bGKCQF/" class="post-tags">
+                            # terminal
+                        </a>
+                    
+                        <a href="https://mkitclear.github.io/tag/1FccN9RRjB/" class="post-tags">
+                            # 终端
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#hyper">Hyper</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98%E6%8F%92%E4%BB%B6">主题/插件</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
+</ul>
+</li>
+<li><a href="#fish-shell">Fish Shell</a></li>
+<li><a href="#%E6%95%99%E7%A8%8B">教程</a>
+<ul>
+<li><a href="#%E8%A1%A5%E5%85%85">补充</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="hyper">Hyper</h2>
+<h3 id="简介">简介</h3>
+<blockquote>
+<p>Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。</p>
+</blockquote>
+<!-- more -->
+<h3 id="安装">安装</h3>
+<p>请按 <a href="https://hyper.is/">Hyper™官网</a> 或 <a href="https://github.com/vercel/hyper">Hyper github 主页</a> 介绍进行安装。</p>
+<h3 id="主题插件">主题/插件</h3>
+<p>在 <a href="https://hyper.is/">Hyper™官网</a> 可找到喜欢的主题和插件。点开 插件/主题 详情页面，点击右下角的 <code>install</code> 会弹出安装命令，复制命令到 Hyper 执行即可进行安装。</p>
+<h3 id="命令">命令</h3>
+<pre><code class="language-bash"># 安装插件/主题
+hyper i xxx
+# 删除插件/主题
+hyper rm xxx
+</code></pre>
+<h3 id="配置">配置</h3>
+<p>Hyper 所有的配置都在 hyper.js 文件中，包括字体、颜色、插件、shell 等。</p>
+<ul>
+<li>配置半透明<br>
+找到 <code>backgroundColor</code>那行，改成如下：<pre><code> backgroundColor: '#000.0.5',
+ # 或者下面这种
+ backgroundColor: 'rgba(0,0,0,0.5)', 
+</code></pre>
+</li>
+<li>支持中文<pre><code>env: {LANG:'zh_CN.utf-8'},
+</code></pre>
+</li>
+<li>切换 Shell<br>
+Hyper 默认 Shell 为系统默认的 Shell，而 macOS 自 Catalina 版本之后默认的 Shell 是 zsh，因为我个人比较喜欢 Fish Shell，所以我将 Hyper 的默认 Shell 调整为 Fish Shell。找到 shell 那行，修改如下：<pre><code class="language-bash">shell: '/usr/local/bin/fish',
+</code></pre>
+</li>
+</ul>
+<h2 id="fish-shell">Fish Shell</h2>
+<h2 id="教程">教程</h2>
+<p><a href="https://wiki.archlinux.org/index.php/Fish_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%80%9A%E8%BF%87.bashrc%E5%90%AF%E5%8A%A8fish">fish (简体中文) - ArchWiki</a><br>
+<a href="https://wsq.cool/post/use-fish-shell">新一代命令行工具 - Fish Shell - wsq.cool</a><br>
+<a href="http://www.ruanyifeng.com/blog/2017/05/fish_shell.html">Fish shell 入门教程 - 阮一峰的网络日志</a></p>
+<h3 id="补充">补充</h3>
+<blockquote>
+<p>fish 对 anaconda 的支持或者 anaconda 对 fish 的支持一直不是很友好，都需要做额外的操作才能正常使用，这个额外的操作还随着版本更新一直在变。</p>
+</blockquote>
+<p>解决方案，anaconda 的安装路径中有关于 fish 的解决方案，先在系统默认的终端中找到 anaconda 的安装位置。</p>
+<pre><code class="language-bash">conda info
+</code></pre>
+<p>在给出的 info 中找到 <code>base environment</code> ，我安装的是 miniconda ，base environment 是 <code>/usr/local/miniconda3</code> ，查看 conda.fish 即可找到解决方案。</p>
+<pre><code class="language-bash">more /usr/local/miniconda3/etc/fish/conf.d/conda.fish
+</code></pre>
+
                 </div>
             </article>
         </div>
-        <br>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mkitclear.github.io/post/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/" class="post-title gt-a-link">
+                    Mac 终端提示: The default interactive shell is now zsh.
+                </a>
+            </div>
+        
+
+        
+
         
             
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
@@ -140,11 +242,11 @@
 </script>
 
             
+
             
         
 
         
-
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">我不知将去向何方，但我已在路上。</div>
