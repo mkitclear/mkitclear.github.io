@@ -6,7 +6,7 @@
 
 <title>Hyper &amp; Fish Shell | MakeItClear</title>
 
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614664431931">
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614665555292">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1614664431931" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1614665555292" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -128,23 +128,25 @@ hyper rm xxx
 </code></pre>
 <h3 id="配置">配置</h3>
 <p>Hyper 所有的配置都在 hyper.js 文件中，包括字体、颜色、插件、shell 等。</p>
-<ul>
-<li>配置半透明<br>
-找到 <code>backgroundColor</code>那行，改成如下：<pre><code> backgroundColor: '#000.0.5',
- # 或者下面这种
- backgroundColor: 'rgba(0,0,0,0.5)', 
+<h4 id="配置窗口半透明">配置窗口半透明</h4>
+<p>找到 <code>backgroundColor</code>那行，改成如下：</p>
+<pre><code>backgroundColor: '#000.0.5',
+# 或者下面这种
+backgroundColor: 'rgba(0,0,0,0.5)', 
 </code></pre>
-</li>
-<li>支持中文<pre><code>env: {LANG:'zh_CN.utf-8'},
+<h4 id="支持中文">支持中文</h4>
+<pre><code>env: {LANG:'zh_CN.utf-8'},
 </code></pre>
-</li>
-<li>切换 Shell<br>
-Hyper 默认 Shell 为系统默认的 Shell，而 macOS 自 Catalina 版本之后默认的 Shell 是 zsh，因为我个人比较喜欢 Fish Shell，所以我将 Hyper 的默认 Shell 调整为 Fish Shell。找到 shell 那行，修改如下：<pre><code class="language-bash">shell: '/usr/local/bin/fish',
+<h4 id="切换-shell">切换 Shell</h4>
+<p>Hyper 默认 Shell 为系统默认的 Shell，而 macOS 自 Catalina 版本之后默认的 Shell 是 zsh，因为我个人比较喜欢 Fish Shell，所以我将 Hyper 的默认 Shell 调整为 Fish Shell。找到 shell 那行，修改如下：</p>
+<pre><code class="language-bash">shell: '/usr/local/bin/fish',
 </code></pre>
-</li>
-</ul>
 <h2 id="fish-shell">Fish Shell</h2>
-<h2 id="教程">教程</h2>
+<h3 id="简介-2">简介</h3>
+<blockquote>
+<p>Fish 是 &quot;the friendly interactive shell&quot; 的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。</p>
+</blockquote>
+<h3 id="教程">教程</h3>
 <p><a href="https://wiki.archlinux.org/index.php/Fish_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%80%9A%E8%BF%87.bashrc%E5%90%AF%E5%8A%A8fish">fish (简体中文) - ArchWiki</a><br>
 <a href="https://wsq.cool/post/use-fish-shell">新一代命令行工具 - Fish Shell - wsq.cool</a><br>
 <a href="http://www.ruanyifeng.com/blog/2017/05/fish_shell.html">Fish shell 入门教程 - 阮一峰的网络日志</a></p>
