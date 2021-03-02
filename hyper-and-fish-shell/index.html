@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Hyper &amp; Fish Shell | MakeItClear</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614671548473">
+<link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Hyper
+简介
+
+Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。
+
+
+安装
+请按 Hyper™..." />
+    <meta name="keywords" content="shell,terminal" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mkitclear.github.io">
+        <img src="https://mkitclear.github.io/images/avatar.png?v=1614671548473" class="site-logo">
+        <h1 class="site-title">MakeItClear</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      我不知将去向何方，但我已在路上。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mkitclear.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Hyper &amp; Fish Shell</h2>
+            <div class="post-date">2021-02-28</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="hyper">Hyper</h2>
+<h3 id="简介">简介</h3>
+<blockquote>
+<p>Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。</p>
+</blockquote>
+<!-- more -->
+<h3 id="安装">安装</h3>
+<p>请按 <a href="https://hyper.is/">Hyper™官网</a> 或 <a href="https://github.com/vercel/hyper">Hyper github 主页</a> 介绍进行安装。</p>
+<h3 id="主题插件">主题/插件</h3>
+<p>在 <a href="https://hyper.is/">Hyper™官网</a> 可找到喜欢的主题和插件。点开 插件/主题 详情页面，点击右下角的 <code>install</code> 会弹出安装命令，复制命令到 Hyper 执行即可进行安装。</p>
+<h3 id="命令">命令</h3>
+<pre><code class="language-bash"># 安装插件/主题
+hyper i xxx
+# 删除插件/主题
+hyper rm xxx
+</code></pre>
+<h3 id="配置">配置</h3>
+<p>Hyper 所有的配置都在 hyper.js 文件中，包括字体、颜色、插件、shell 等。</p>
+<h4 id="配置窗口半透明">配置窗口半透明</h4>
+<p>找到 <code>backgroundColor</code>那行，改成如下：</p>
+<pre><code>backgroundColor: '#000.0.5',
+# 或者下面这种
+backgroundColor: 'rgba(0,0,0,0.5)', 
+</code></pre>
+<h4 id="支持中文">支持中文</h4>
+<pre><code>env: {LANG:'zh_CN.utf-8'},
+</code></pre>
+<h4 id="切换-shell">切换 Shell</h4>
+<p>Hyper 默认 Shell 为系统默认的 Shell，而 macOS 自 Catalina 版本之后默认的 Shell 是 zsh，因为我个人比较喜欢 Fish Shell，所以我将 Hyper 的默认 Shell 调整为 Fish Shell。找到 shell 那行，修改如下：</p>
+<pre><code class="language-bash">shell: '/usr/local/bin/fish',
+</code></pre>
+<h2 id="fish-shell">Fish Shell</h2>
+<h3 id="简介-2">简介</h3>
+<blockquote>
+<p>Fish 是 &quot;the friendly interactive shell&quot; 的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。</p>
+</blockquote>
+<h3 id="教程">教程</h3>
+<p><a href="https://wiki.archlinux.org/index.php/Fish_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%80%9A%E8%BF%87.bashrc%E5%90%AF%E5%8A%A8fish">fish (简体中文) - ArchWiki</a><br>
+<a href="https://wsq.cool/post/use-fish-shell">新一代命令行工具 - Fish Shell - wsq.cool</a><br>
+<a href="http://www.ruanyifeng.com/blog/2017/05/fish_shell.html">Fish shell 入门教程 - 阮一峰的网络日志</a></p>
+<h3 id="补充">补充</h3>
+<blockquote>
+<p>fish 对 anaconda 的支持或者 anaconda 对 fish 的支持一直不是很友好，都需要做额外的操作才能正常使用，这个额外的操作还随着版本更新一直在变。</p>
+</blockquote>
+<p>解决方案，anaconda 的安装路径中有关于 fish 的解决方案，先在系统默认的终端中找到 anaconda 的安装位置。</p>
+<pre><code class="language-bash">conda info
+</code></pre>
+<p>在给出的 info 中找到 <code>base environment</code> ，我安装的是 miniconda ，base environment 是 <code>/usr/local/miniconda3</code> ，查看 conda.fish 即可找到解决方案。</p>
+<pre><code class="language-bash">more /usr/local/miniconda3/etc/fish/conf.d/conda.fish
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mkitclear.github.io/eeFB4e3ll/" class="tag">
+                    shell
+                  </a>
+                
+                  <a href="https://mkitclear.github.io/BSj-bGKCQF/" class="tag">
+                    terminal
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
+                  <h3 class="post-title">
+                    Mac 终端提示: The default interactive shell is now zsh.
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f6f90a8d1445d32d2800',
+        clientSecret: 'd724645daacd503719e06bd1e3a188cf93bfa158',
+        repo: 'blog-comment',
+        owner: 'mkitclear',
+        admin: ['mkitclear'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

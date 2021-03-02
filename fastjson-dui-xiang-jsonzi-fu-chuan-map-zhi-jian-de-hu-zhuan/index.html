@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | MakeItClear</title>
+<title>FastJson 对象、JSON、字符串、Map 之间的互转 | MakeItClear</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -25,17 +25,13 @@
 
 
     <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+对象与字符串之间的互转
 
-
-🏠 关于本站
-本站基于 Gridea 和 GitHub Pages 创建,集成了 Gitalk 讨论区。
-👨‍💻 博主是谁
-God knows
-⛹ 兴趣爱好
-台球，电影，阅读，写作(伪)
-..." />
-    <meta name="keywords" content="" />
+// 将对象转换成为字符串
+String str = JSON.toJSONString(infoDo);
+// 字符串转换成为对象
+InfoDo infoDo = JSON.parseObject(strInf..." />
+    <meta name="keywords" content="dev" />
   </head>
   <body>
     <div id="app" class="main">
@@ -106,25 +102,75 @@ God knows
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">FastJson 对象、JSON、字符串、Map 之间的互转</h2>
+            <div class="post-date">2021-03-02</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<!-- more -->
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>本站基于 <a href="https://gridea.dev/">Gridea</a> 和 <a href="https://pages.github.com/">GitHub Pages</a> 创建,集成了 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 讨论区。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>God knows</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>台球，电影，阅读，写作(伪)</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>Don't waste your time</p>
+              <ol>
+<li>对象与字符串之间的互转</li>
+</ol>
+<pre><code class="language-Java">// 将对象转换成为字符串
+String str = JSON.toJSONString(infoDo);
+// 字符串转换成为对象
+InfoDo infoDo = JSON.parseObject(strInfoDo, InfoDo.class);
+</code></pre>
+<ol>
+<li>对象集合与字符串之间的互转</li>
+</ol>
+<pre><code class="language-Java">// 将对象集合转换成为字符串
+String users = JSON.toJSONString(users);
+// 将字符串转换成为对象集合
+List&lt;User&gt; userList = JSON.parseArray(userStr, User.class); 
+</code></pre>
+<ol>
+<li>字符串互转JSONObject</li>
+</ol>
+<pre><code class="language-Java">// String 转 Json对象
+JSONObject jsonObject = JSONObject.parseObject(jsonString);
+// json对象转string
+JSONObject jsonObject = JSONObject.parseObject(str);//json对象转字符串 
+String jsonString = jsonObject.toJSONString();
+</code></pre>
+<ol>
+<li>map与字符串之间互转</li>
+</ol>
+<pre><code class="language-Java">  //字符串转map
+  JSONObject  jsonObject = JSONObject.parseObject(str);
+  Map&lt;String,Object&gt; map = (Map&lt;String,Object&gt;)jsonObject;//    //json对象转Map
+  //map转字符串
+  String jsonString = JSON.toJSONString(map);
+</code></pre>
+<ol>
+<li>Map 转 Json对象</li>
+</ol>
+<pre><code class="language-Java">//map转json对象    
+Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();
+map.put(&quot;age&quot;, 24);
+map.put(&quot;name&quot;, &quot;cool_summer_moon&quot;);
+JSONObject json = new JSONObject(map);　　
+//json对象转Map 　　
+Map&lt;String,Object&gt; map = (Map&lt;String,Object&gt;)jsonObject;
+</code></pre>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://mkitclear.github.io/DdSg3LJSj/" class="tag">
+                    dev
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
+                  <h3 class="post-title">
+                    Mac 安装配置Mysql
+                  </h3>
+                </a>
+              </div>
             
 
             

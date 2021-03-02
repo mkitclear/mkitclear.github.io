@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | MakeItClear</title>
+<title>Mac 终端提示: The default interactive shell is now zsh. | MakeItClear</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,18 +24,13 @@
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+    <meta name="description" content="在 Mac 上将 zsh 用作默认 Shell - Apple 支持
+
+官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。
 
 
-🏠 关于本站
-本站基于 Gridea 和 GitHub Pages 创建,集成了 Gitalk 讨论区。
-👨‍💻 博主是谁
-God knows
-⛹ 兴趣爱好
-台球，电影，阅读，写作(伪)
-..." />
-    <meta name="keywords" content="" />
+如果想用 zsh shell 的话，..." />
+    <meta name="keywords" content="shell,terminal" />
   </head>
   <body>
     <div id="app" class="main">
@@ -106,25 +101,52 @@ God knows
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">Mac 终端提示: The default interactive shell is now zsh.</h2>
+            <div class="post-date">2021-02-28</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+              <p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
+<blockquote>
+<p>官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。</p>
 </blockquote>
 <!-- more -->
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>本站基于 <a href="https://gridea.dev/">Gridea</a> 和 <a href="https://pages.github.com/">GitHub Pages</a> 创建,集成了 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 讨论区。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>God knows</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>台球，电影，阅读，写作(伪)</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>Don't waste your time</p>
+<p>如果想用 zsh shell 的话，按终端提示操作即可。如果不想用 zsh shell ，可以先看系统支持的 shell 有哪些。</p>
+<pre><code class="language-bash">more /etc/shells
+</code></pre>
+<p>选一个自己喜欢的，以常见的 bash 为例，先切换到 root 用户</p>
+<pre><code class="language-bash">sudo -s
+</code></pre>
+<p>再将系统默认的 shell 换成 bash</p>
+<pre><code class="language-bash">chsh -s /bin/bash
+</code></pre>
+<p>最后</p>
+<pre><code class="language-bash"> vim ~/.bash_profile
+</code></pre>
+<p>将 <code>export BASH_SILENCE_DEPRECATION_WARNING=1</code> 加在 <code>.bash_profile</code> 文件末尾 ，防止提示再次出现。</p>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://mkitclear.github.io/eeFB4e3ll/" class="tag">
+                    shell
+                  </a>
+                
+                  <a href="https://mkitclear.github.io/BSj-bGKCQF/" class="tag">
+                    terminal
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
+                  <h3 class="post-title">
+                    Chrome 内置二维码功能
+                  </h3>
+                </a>
+              </div>
             
 
             

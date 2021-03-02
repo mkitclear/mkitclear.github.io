@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-03-02T07:35:47.463Z</updated>
+    <updated>2021-03-02T07:52:31.508Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -12,29 +12,29 @@
     <rights>All rights reserved 2021, MakeItClear</rights>
     <entry>
         <title type="html"><![CDATA[FastJson 对象、JSON、字符串、Map 之间的互转]]></title>
-        <id>https://mkitclear.github.io/post/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/</id>
-        <link href="https://mkitclear.github.io/post/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
+        <id>https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/</id>
+        <link href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
         </link>
         <updated>2021-03-02T06:46:34.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 安装配置Mysql]]></title>
-        <id>https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-mysql/</id>
-        <link href="https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-mysql/">
+        <id>https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/</id>
+        <link href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
         </link>
         <updated>2021-03-02T06:42:11.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 安装配置 Miniconda]]></title>
-        <id>https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-miniconda/</id>
-        <link href="https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-miniconda/">
+        <id>https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/</id>
+        <link href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/">
         </link>
         <updated>2021-03-02T06:24:50.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hyper & Fish Shell]]></title>
-        <id>https://mkitclear.github.io/post/hyper-and-fish-shell/</id>
-        <link href="https://mkitclear.github.io/post/hyper-and-fish-shell/">
+        <id>https://mkitclear.github.io/hyper-and-fish-shell/</id>
+        <link href="https://mkitclear.github.io/hyper-and-fish-shell/">
         </link>
         <updated>2021-02-28T15:08:50.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="hyper">Hyper</h2>
@@ -52,8 +52,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 终端提示: The default interactive shell is now zsh.]]></title>
-        <id>https://mkitclear.github.io/post/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/</id>
-        <link href="https://mkitclear.github.io/post/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
+        <id>https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/</id>
+        <link href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
         </link>
         <updated>2021-02-28T14:22:54.000Z</updated>
         <summary type="html"><![CDATA[<p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
@@ -69,29 +69,29 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Chrome 内置二维码功能]]></title>
-        <id>https://mkitclear.github.io/post/chrome-nei-zhi-er-wei-ma-gong-neng/</id>
-        <link href="https://mkitclear.github.io/post/chrome-nei-zhi-er-wei-ma-gong-neng/">
+        <id>https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/</id>
+        <link href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
         </link>
         <updated>2021-02-25T17:27:06.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Chrome 优秀插件推荐「持续更新」]]></title>
-        <id>https://mkitclear.github.io/post/chrome-you-xiu-cha-jian-chi-xu-geng-xin/</id>
-        <link href="https://mkitclear.github.io/post/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
+        <id>https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/</id>
+        <link href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
         </link>
         <updated>2021-02-25T06:21:27.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 免费效率软件推荐「持续更新」]]></title>
-        <id>https://mkitclear.github.io/post/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/</id>
-        <link href="https://mkitclear.github.io/post/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
+        <id>https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/</id>
+        <link href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
         </link>
         <updated>2021-02-24T16:54:22.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[为什么要努力读书？]]></title>
-        <id>https://mkitclear.github.io/post/wei-shi-me-yao-nu-li-du-shu/</id>
-        <link href="https://mkitclear.github.io/post/wei-shi-me-yao-nu-li-du-shu/">
+        <id>https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/</id>
+        <link href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/">
         </link>
         <updated>2021-02-08T18:43:57.000Z</updated>
         <summary type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
@@ -101,8 +101,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[血槽管理法]]></title>
-        <id>https://mkitclear.github.io/post/xie-cao-guan-li-fa/</id>
-        <link href="https://mkitclear.github.io/post/xie-cao-guan-li-fa/">
+        <id>https://mkitclear.github.io/xie-cao-guan-li-fa/</id>
+        <link href="https://mkitclear.github.io/xie-cao-guan-li-fa/">
         </link>
         <updated>2021-02-08T17:00:50.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
