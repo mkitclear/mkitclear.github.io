@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>换工作小tips | MakeItClear</title>
+<title>Mac 安装配置 Miniconda | MakeItClear</title>
 
 <link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico?v=1614666414557">
 
@@ -89,29 +89,139 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    换工作小tips
+                    Mac 安装配置 Miniconda
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-02-09 ·
+                        · 2021-03-02 ·
                     </time>
                     
-                        <a href="https://mkitclear.github.io/tag/4DSvdcxqb/" class="post-tags">
-                            # 职场
+                        <a href="https://mkitclear.github.io/tag/DdSg3LJSj/" class="post-tags">
+                            # dev
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>选择上升期的公司<br>
-而不是选择成熟期的公司<br>
-加入公司的核心业务<br>
-而不是边缘业务<br>
-选择有产业理想的老板<br>
-而不是只想赚钱的老板<br>
-新手选择成熟业务<br>
-高手选择新业务<br>
-选择合适自己的竞争环境<br>
-避开惨烈竞争</p>
+                    <h3 id="miniconda-下载地址">Miniconda 下载地址：</h3>
+<p><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda — Conda documentation</a></p>
+<h3 id="通过homebrew-安装-miniconda">通过Homebrew 安装 Miniconda</h3>
+<pre><code class="language-Bash">brew cask install miniconda
+</code></pre>
+<h3 id="查看版本信息">查看版本信息</h3>
+<pre><code class="language-Bash">conda info
+</code></pre>
+<h3 id="升级-conda-和-pip-版本">升级 conda 和 pip 版本</h3>
+<pre><code class="language-Bash">conda update conda
+pip install --upgrade pip
+</code></pre>
+<h3 id="miniconda-下载加速设置国内镜像">Miniconda 下载加速设置国内镜像</h3>
+<p>在终端使用命令</p>
+<pre><code class="language-Bash">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --set show_channel_urls yes
+</code></pre>
+<p>或者编辑 ~/.condarc</p>
+<pre><code class="language-Bash">channels:
+  - defaults
+show_channel_urls: true
+channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+
+</code></pre>
+<h3 id="通过conda-安装包">通过conda 安装包</h3>
+<pre><code class="language-Bash"> $ sudo pip install opencv-python
+
+</code></pre>
+<h3 id="查看当前-env-list">查看当前 env list</h3>
+<p><code>conda env list</code> ,<code>conda info -e</code> 两个命令效果一样。</p>
+<pre><code class="language-Bash">$ conda env list
+# conda environments:
+#
+base                  *  /usr/local/miniconda3
+djangocms                /usr/local/miniconda3/envs/djangocms
+learn-python3            /usr/local/miniconda3/envs/learn-python3
+python37                 /usr/local/miniconda3/envs/python37
+</code></pre>
+<h3 id="创建环境">创建环境</h3>
+<ol>
+<li>使用<code>conda create</code>创建虚拟环境，比如创建一个名字为djangocms，python version为3.7的虚拟环境：</li>
+</ol>
+<pre><code class="language-Bash"># 注意：这里最好指定python的版本，例如python=3.7
+# 不然系统会直接使用global python version
+# 并且把你所安装的依赖包全部放在global env下面，不利于你对python虚拟环境的隔离
+conda create -n djangocms python=3.7 -y
+
+#创建完毕后注意看提示
+# 激活环境
+# To activate this environment, use:
+# &gt; source activate djangocms 
+# 退出当前环境
+# To deactivate an active environment, use:
+# &gt; source deactivate
+#
+
+# 查看env list
+conda env list
+# conda environments:
+#
+base                  *  /usr/local/miniconda3
+djangocms                /usr/local/miniconda3/envs/python37 
+</code></pre>
+<h3 id="导出环境">导出环境</h3>
+<p>先进入当前环境，输入命令</p>
+<pre><code class="language-Bash">$ conda env export &gt; environment.yaml
+
+</code></pre>
+<p>此命令只导出通过conda install 安装的包，需要导出pip install 安装的包，在终端执行命令</p>
+<pre><code class="language-Bash">$ pip freeze &gt; requirements.txt 
+
+</code></pre>
+<h3 id="从导出的-environmentyaml-文件创建环境">从导出的 environment.yaml 文件创建环境</h3>
+<pre><code class="language-Bash">conda create -f environment.yaml -n myenv
+
+</code></pre>
+<h3 id="pip-删除全部包">pip 删除全部包</h3>
+<pre><code class="language-Bash">$ pip uninstall -r requirements.txt -y -v
+
+</code></pre>
+<p>-r 包列表文件， -y 不提示是否删除， -v 输出日志</p>
+<h3 id="conda-删除环境">conda 删除环境</h3>
+<pre><code class="language-Bash">$ conda env remove -n myenv
+
+</code></pre>
+<h3 id="解决终端自动激活基本环境base在终端输入">解决终端自动激活基本环境（base），在终端输入</h3>
+<pre><code class="language-Bash">  conda config --set auto_activate_base false
+
+</code></pre>
+<p>如果需要每次都自动激活，在终端输入</p>
+<pre><code class="language-Bash">  conda config --set auto_activate_base true
+
+</code></pre>
+<h3 id="卸载-miniconda">卸载 Miniconda</h3>
+<p>找到 miniconda 的文件夹使用rm命令将它删除</p>
+<pre><code class="language-Bash">#去掉~/.bash_profile环境变量配置
+# added by Miniconda2 installer
+export PATH=&quot;/Users/xy920/miniconda2/bin:$PATH&quot;
+
+#删除miniconda
+rm -rf ~/miniconda3
+
+# 去掉相关隐藏文件
+rm -rf ~/.condarc ~/.conda ~/.continuum 
+</code></pre>
 
                 </div>
             </article>
@@ -120,8 +230,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://mkitclear.github.io/post/git-xue-xi-bi-ji/" class="post-title gt-a-link">
-                    Git 学习笔记
+                <a href="https://mkitclear.github.io/post/hyper-and-fish-shell/" class="post-title gt-a-link">
+                    Hyper &amp; Fish Shell
                 </a>
             </div>
         

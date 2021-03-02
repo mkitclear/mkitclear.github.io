@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-03-02T06:23:13.995Z</updated>
+    <updated>2021-03-02T06:27:07.673Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MakeItClear</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac 安装配置 Miniconda]]></title>
+        <id>https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-miniconda/</id>
+        <link href="https://mkitclear.github.io/post/mac-an-zhuang-pei-zhi-miniconda/">
+        </link>
+        <updated>2021-03-02T06:24:50.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hyper & Fish Shell]]></title>
         <id>https://mkitclear.github.io/post/hyper-and-fish-shell/</id>
@@ -106,12 +113,5 @@
         <link href="https://mkitclear.github.io/post/you-yang-yun-dong-he-wu-yang-yun-dong/">
         </link>
         <updated>2021-02-08T16:21:16.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[好看照片的视觉感受]]></title>
-        <id>https://mkitclear.github.io/post/hao-kan-zhao-pian-de-shi-jue-gan-shou/</id>
-        <link href="https://mkitclear.github.io/post/hao-kan-zhao-pian-de-shi-jue-gan-shou/">
-        </link>
-        <updated>2021-02-08T16:20:19.000Z</updated>
     </entry>
 </feed>
