@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="我不知将去向何方，但我已在路上。"><meta charset="UTF-8"><title>Mac 安装配置Mysql | MakeItClear</title>
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="我不知将去向何方，但我已在路上。"><meta charset="UTF-8"><title>Homebrew 安装及更新软件 | MakeItClear</title>
 <link href="https://mkitclear.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://mkitclear.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://mkitclear.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 <script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
 
-<link rel="canonical" href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/" />
+<link rel="canonical" href="https://mkitclear.github.io/ZVg06MJ7i/" />
 </head>
 <body>
 <div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
@@ -23,52 +23,64 @@
 
 <div class="main"><div class="main-inner"><div class="content">
 <article class="post">
-<h2 class="post_title sm_margin"><a>Mac 安装配置Mysql</a></h2>
+<h2 class="post_title sm_margin"><a>Homebrew 安装及更新软件</a></h2>
 <script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
-<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2021-03-02</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://mkitclear.github.io/DdSg3LJSj/" class="tag">dev</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">260字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">2 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2021-03-03</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://mkitclear.github.io/DdSg3LJSj/" class="tag">dev</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">140字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">1 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
 </section>
 
 <div style="display:flex">
 <div class="md_block" id="md_block">
 <div class="round-shape-one"></div>
-<h2 id="安装">安装</h2>
-<pre><code class="language-Bash">brew install mysql@5.7  # 安装
-brew link --force mysql@5.7 # 将mysql 5.7 版本设置为默认版本
-brew services start mysql@5.7 # 启动服务，并将mysql 设置为开机自启服务
-brew services list # 查看 mysql 是否成为开机自启服务
-
-brew services stop mysql@5.7 # 停止
-brew services restart mysql@5.7 # 重启
-</code></pre>
+<h2 id="brew下载不带界面的命令行下的工具和第三方库">brew「下载不带界面的命令行下的工具和第三方库」</h2>
+<hr>
 <ul>
 <li>
-<p>说明</p>
-<p>The <code>brew services start mysql@5.7</code> - instruction is equal to :</p>
+<p>brew install 安装</p>
+</li>
+<li>
+<p>brew uninstall 卸载</p>
+</li>
+<li>
+<p>brew update 更新 homebrew</p>
+</li>
+<li>
+<p>brew upgrade 安装已更新软件</p>
+</li>
+<li>
+<p>brew cleanup 清理</p>
 </li>
 </ul>
-<pre><code class="language-Bash">$ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
-$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+<pre><code class="language-Bash"># 一键更新清理
+brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup 
 </code></pre>
-<h2 id="设置密码">设置密码</h2>
-<p>启动之后，输入下面命令设置密码</p>
-<pre><code class="language-Bash">mysql_secure_installation
+<h2 id="brew-cask安装带界面的应用软件">brew cask「安装带界面的应用软件」</h2>
+<hr>
+<h3 id="安装-cask">安装 cask</h3>
+<pre><code class="language-Bash">brew tap caskroom/cask
+
 </code></pre>
-<p>5.7.x对设置的密码有严格的要求，分为LOW、MEDIUM、STRONG三个等级，对应要求如下：</p>
-<pre><code class="language-Bash">LOW    Length &gt;= 8
-MEDIUM Length &gt;= 8, numeric, mixed case, and special characters
-STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary file
+<h3 id="命令">命令</h3>
+<ul>
+<li>
+<p>brew cask install 安装</p>
+</li>
+<li>
+<p>brew cask uninstall 卸载</p>
+</li>
+</ul>
+<h2 id="brew-cask-upgrade"><a href="https://github.com/buo/homebrew-cask-upgrade">brew-cask-upgrade</a> 「更新通过brew cask 安装的软件」</h2>
+<hr>
+<h3 id="安装-brew-cask-upgrade">安装 brew-cask-upgrade</h3>
+<pre><code class="language-Bash">brew tap buo/cask-upgrade
+
 </code></pre>
-<p>选low即可，输入8位，我这里使用pwd4root ，其他一路y确认即可。</p>
-<h1 id="启动">启动</h1>
-<pre><code class="language-Bash">$ brew services start mysql@5.7
-==&gt; Successfully stopped `mysql@5.7` (label: homebrew.mxcl.mysql@5.7)
+<h3 id="更新命令">更新命令</h3>
+<p>更新所有过时应用：</p>
+<pre><code class="language-Bash">brew cu
+
 </code></pre>
-<h2 id="登录">登录</h2>
-<pre><code class="language-Bash">$ mysql -u root -p 
-Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 20
-Server version: 8.0.15 Homebrew
+<p>更新指定应用：</p>
+<pre><code class="language-Bash">brew cu [CASK]
 </code></pre>
 
 <span id="footnote"></span>
@@ -77,13 +89,19 @@ Server version: 8.0.15 Homebrew
 <div class="toc-container"><ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
-<li><a href="#%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81">设置密码</a></li>
+<li><a href="#brew%E4%B8%8B%E8%BD%BD%E4%B8%8D%E5%B8%A6%E7%95%8C%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E7%9A%84%E5%B7%A5%E5%85%B7%E5%92%8C%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93">brew「下载不带界面的命令行下的工具和第三方库」</a></li>
+<li><a href="#brew-cask%E5%AE%89%E8%A3%85%E5%B8%A6%E7%95%8C%E9%9D%A2%E7%9A%84%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6">brew cask「安装带界面的应用软件」</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85-cask">安装 cask</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4">命令</a></li>
 </ul>
 </li>
-<li><a href="#%E5%90%AF%E5%8A%A8">启动</a>
+<li><a href="#brew-cask-upgrade">brew-cask-upgrade</a>
 <ul>
-<li><a href="#%E7%99%BB%E5%BD%95">登录</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85-brew-cask-upgrade">安装 brew-cask-upgrade</a></li>
+<li><a href="#%E6%9B%B4%E6%96%B0%E5%91%BD%E4%BB%A4">更新命令</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -111,7 +129,7 @@ if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop)
 var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
 var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
 var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
-content="本文最后更新于2021-03-02，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2021-03-02 14:42:11";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+content="本文最后更新于2021-03-03，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2021-03-03 17:53:40";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
 <style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://mkitclear.github.io" style="margin:0;">MakeItClear</a>.</div>

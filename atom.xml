@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-03-02T08:05:53.015Z</updated>
+    <updated>2021-03-03T09:55:16.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MakeItClear</rights>
+    <entry>
+        <title type="html"><![CDATA[Homebrew 安装及更新软件]]></title>
+        <id>https://mkitclear.github.io/ZVg06MJ7i/</id>
+        <link href="https://mkitclear.github.io/ZVg06MJ7i/">
+        </link>
+        <updated>2021-03-03T09:53:40.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FastJson 对象、JSON、字符串、Map 之间的互转]]></title>
         <id>https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/</id>
@@ -97,21 +104,6 @@
         <summary type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[血槽管理法]]></title>
-        <id>https://mkitclear.github.io/xie-cao-guan-li-fa/</id>
-        <link href="https://mkitclear.github.io/xie-cao-guan-li-fa/">
-        </link>
-        <updated>2021-02-08T17:00:50.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>注：本文内容来自<a href="%5Bhttps://www.okjike.com%5D(https://www.okjike.com)">即刻</a>用户<a href="https://web.okjike.com/u/9DDEA652-9FC7-4136-91E2-67C12883DF9E">提案鱼</a></p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>注：本文内容来自<a href="%5Bhttps://www.okjike.com%5D(https://www.okjike.com)">即刻</a>用户<a href="https://web.okjike.com/u/9DDEA652-9FC7-4136-91E2-67C12883DF9E">提案鱼</a></p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
