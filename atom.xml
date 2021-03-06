@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-03-04T01:51:14.920Z</updated>
+    <updated>2021-03-06T18:03:57.582Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://mkitclear.github.io/images/avatar.png</logo>
     <icon>https://mkitclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MakeItClear</rights>
+    <entry>
+        <title type="html"><![CDATA[Fish Shell 设置 python3 为默认版本]]></title>
+        <id>https://mkitclear.github.io/9ScV2bPdL/</id>
+        <link href="https://mkitclear.github.io/9ScV2bPdL/">
+        </link>
+        <updated>2021-03-06T17:47:50.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Homebrew 安装及更新软件]]></title>
         <id>https://mkitclear.github.io/ZVg06MJ7i/</id>
@@ -94,16 +101,5 @@
         <link href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
         </link>
         <updated>2021-02-24T16:54:22.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[为什么要努力读书？]]></title>
-        <id>https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/</id>
-        <link href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/">
-        </link>
-        <updated>2021-02-08T18:43:57.000Z</updated>
-        <summary type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>我们读过的书大多是要忘记的，那么努力读书的意义在哪里？这里有两个答案，或许能解释一二。</p>
-]]></content>
     </entry>
 </feed>
