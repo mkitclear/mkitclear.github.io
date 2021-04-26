@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkitclear.github.io</id>
     <title>MakeItClear</title>
-    <updated>2021-04-26T09:31:17.203Z</updated>
+    <updated>2021-04-26T09:36:41.985Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkitclear.github.io"/>
     <link rel="self" href="https://mkitclear.github.io/atom.xml"/>
@@ -16,6 +16,32 @@
         <link href="https://mkitclear.github.io/9ScV2bPdL/">
         </link>
         <updated>2021-03-06T17:47:50.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>查看 python 的安装位置</li>
+</ol>
+<pre><code class="language-Bash">ls -l /usr/local/bin/python*
+</code></pre>
+<ol start="2">
+<li>打开 fish 配置文件</li>
+</ol>
+<pre><code class="language-Bash">vim ~/.config/fish/config.fish
+</code></pre>
+<ol start="3">
+<li>在配置文件中加入 alias 设置（其中 <code>/usr/local/bin/python3</code> 是 python3 的安装位置）</li>
+</ol>
+<pre><code class="language-config">alias python=&quot;/usr/local/bin/python3&quot; 
+</code></pre>
+<ol start="4">
+<li>运行命令使配置生效</li>
+</ol>
+<pre><code class="language-Bash">source ~/.config/fish/config.fish
+</code></pre>
+<ol start="5">
+<li>检查默认 python 版本</li>
+</ol>
+<pre><code class="language-Bash">python --version
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Homebrew 安装及更新软件]]></title>
@@ -23,6 +49,55 @@
         <link href="https://mkitclear.github.io/ZVg06MJ7i/">
         </link>
         <updated>2021-03-03T09:53:40.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="brew下载不带界面的命令行下的工具和第三方库">brew「下载不带界面的命令行下的工具和第三方库」</h2>
+<hr>
+<ul>
+<li>
+<p>brew install 安装</p>
+</li>
+<li>
+<p>brew uninstall 卸载</p>
+</li>
+<li>
+<p>brew update 更新 homebrew</p>
+</li>
+<li>
+<p>brew upgrade 安装已更新软件</p>
+</li>
+<li>
+<p>brew cleanup 清理</p>
+</li>
+</ul>
+<pre><code class="language-Bash"># 一键更新清理
+brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup 
+</code></pre>
+<h2 id="brew-cask安装带界面的应用软件">brew cask「安装带界面的应用软件」</h2>
+<hr>
+<h3 id="安装-cask">安装 cask</h3>
+<pre><code class="language-Bash">brew tap caskroom/cask
+</code></pre>
+<h3 id="命令">命令</h3>
+<ul>
+<li>
+<p>brew cask install 安装</p>
+</li>
+<li>
+<p>brew cask uninstall 卸载</p>
+</li>
+</ul>
+<h2 id="brew-cask-upgrade"><a href="https://github.com/buo/homebrew-cask-upgrade">brew-cask-upgrade</a> 「更新通过brew cask 安装的软件」</h2>
+<hr>
+<h3 id="安装-brew-cask-upgrade">安装 brew-cask-upgrade</h3>
+<pre><code class="language-Bash">brew tap buo/cask-upgrade
+</code></pre>
+<h3 id="更新命令">更新命令</h3>
+<p>更新所有过时应用：</p>
+<pre><code class="language-Bash">brew cu
+</code></pre>
+<p>更新指定应用：</p>
+<pre><code class="language-Bash">brew cu [CASK]
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[FastJson 对象、JSON、字符串、Map 之间的互转]]></title>
@@ -30,6 +105,52 @@
         <link href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
         </link>
         <updated>2021-03-02T06:46:34.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>对象与字符串之间的互转</li>
+</ol>
+<pre><code class="language-Java">// 将对象转换成为字符串
+String str = JSON.toJSONString(infoDo);
+// 字符串转换成为对象
+InfoDo infoDo = JSON.parseObject(strInfoDo, InfoDo.class);
+</code></pre>
+<ol start="2">
+<li>对象集合与字符串之间的互转</li>
+</ol>
+<pre><code class="language-Java">// 将对象集合转换成为字符串
+String users = JSON.toJSONString(users);
+// 将字符串转换成为对象集合
+List&lt;User&gt; userList = JSON.parseArray(userStr, User.class); 
+</code></pre>
+<ol start="3">
+<li>字符串互转JSONObject</li>
+</ol>
+<pre><code class="language-Java">// String 转 Json对象
+JSONObject jsonObject = JSONObject.parseObject(jsonString);
+// json对象转string
+JSONObject jsonObject = JSONObject.parseObject(str);//json对象转字符串 
+String jsonString = jsonObject.toJSONString();
+</code></pre>
+<ol start="4">
+<li>map与字符串之间互转</li>
+</ol>
+<pre><code class="language-Java">//字符串转map
+JSONObject  jsonObject = JSONObject.parseObject(str);
+Map&lt;String,Object&gt; map = (Map&lt;String,Object&gt;)jsonObject;//    //json对象转Map
+//map转字符串
+String jsonString = JSON.toJSONString(map);
+</code></pre>
+<ol start="5">
+<li>Map 转 Json对象</li>
+</ol>
+<pre><code class="language-Java">//map转json对象    
+Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();
+map.put(&quot;age&quot;, 24);
+map.put(&quot;name&quot;, &quot;cool_summer_moon&quot;);
+JSONObject json = new JSONObject(map);　　
+//json对象转Map 　　
+Map&lt;String,Object&gt; map = (Map&lt;String,Object&gt;)jsonObject;
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 安装配置Mysql]]></title>
@@ -37,6 +158,46 @@
         <link href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
         </link>
         <updated>2021-03-02T06:42:11.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="安装">安装</h2>
+<pre><code class="language-Bash">brew install mysql@5.7  # 安装
+brew link --force mysql@5.7 # 将mysql 5.7 版本设置为默认版本
+brew services start mysql@5.7 # 启动服务，并将mysql 设置为开机自启服务
+brew services list # 查看 mysql 是否成为开机自启服务
+
+brew services stop mysql@5.7 # 停止
+brew services restart mysql@5.7 # 重启
+</code></pre>
+<ul>
+<li>
+<p>说明</p>
+<p>The <code>brew services start mysql@5.7</code> - instruction is equal to :</p>
+</li>
+</ul>
+<pre><code class="language-Bash">$ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+</code></pre>
+<h2 id="设置密码">设置密码</h2>
+<p>启动之后，输入下面命令设置密码</p>
+<pre><code class="language-Bash">mysql_secure_installation
+</code></pre>
+<p>5.7.x对设置的密码有严格的要求，分为LOW、MEDIUM、STRONG三个等级，对应要求如下：</p>
+<pre><code class="language-Bash">LOW    Length &gt;= 8
+MEDIUM Length &gt;= 8, numeric, mixed case, and special characters
+STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary file
+</code></pre>
+<p>选low即可，输入8位，我这里使用pwd4root ，其他一路y确认即可。</p>
+<h1 id="启动">启动</h1>
+<pre><code class="language-Bash">$ brew services start mysql@5.7
+==&gt; Successfully stopped `mysql@5.7` (label: homebrew.mxcl.mysql@5.7)
+</code></pre>
+<h2 id="登录">登录</h2>
+<pre><code class="language-Bash">$ mysql -u root -p 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.15 Homebrew
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 安装配置 Miniconda]]></title>
@@ -44,6 +205,118 @@
         <link href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/">
         </link>
         <updated>2021-03-02T06:24:50.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="miniconda-下载地址">Miniconda 下载地址：</h3>
+<p><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda — Conda documentation</a></p>
+<h3 id="通过homebrew-安装-miniconda">通过Homebrew 安装 Miniconda</h3>
+<pre><code class="language-Bash">brew cask install miniconda
+</code></pre>
+<h3 id="查看版本信息">查看版本信息</h3>
+<pre><code class="language-Bash">conda info
+</code></pre>
+<h3 id="升级-conda-和-pip-版本">升级 conda 和 pip 版本</h3>
+<pre><code class="language-Bash">conda update conda
+pip install --upgrade pip
+</code></pre>
+<h3 id="miniconda-下载加速设置国内镜像">Miniconda 下载加速设置国内镜像</h3>
+<p>在终端使用命令</p>
+<pre><code class="language-Bash">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --set show_channel_urls yes
+</code></pre>
+<p>或者编辑 ~/.condarc</p>
+<pre><code class="language-Bash">channels:
+  - defaults
+show_channel_urls: true
+channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</code></pre>
+<h3 id="通过conda-安装包">通过conda 安装包</h3>
+<pre><code class="language-Bash">conda install opencv-python
+</code></pre>
+<h3 id="查看当前-env-list">查看当前 env list</h3>
+<p><code>conda env list</code> ,<code>conda info -e</code> 两个命令效果一样。</p>
+<pre><code class="language-Bash">$ conda env list
+# conda environments:
+#
+base                  *  /usr/local/miniconda3
+djangocms                /usr/local/miniconda3/envs/djangocms
+learn-python3            /usr/local/miniconda3/envs/learn-python3
+python37                 /usr/local/miniconda3/envs/python37
+</code></pre>
+<h3 id="创建环境">创建环境</h3>
+<ol>
+<li>使用<code>conda create</code>创建虚拟环境，比如创建一个名字为djangocms，python version为3.7的虚拟环境：</li>
+</ol>
+<pre><code class="language-Bash"># 注意：这里最好指定python的版本，例如python=3.7
+# 不然系统会直接使用global python version
+# 并且把你所安装的依赖包全部放在global env下面，不利于你对python虚拟环境的隔离
+conda create -n djangocms python=3.7 -y
+
+#创建完毕后注意看提示
+# 激活环境
+# To activate this environment, use:
+# &gt; source activate djangocms 
+# 退出当前环境
+# To deactivate an active environment, use:
+# &gt; source deactivate
+#
+
+# 查看env list
+conda env list
+# conda environments:
+#
+base                  *  /usr/local/miniconda3
+djangocms                /usr/local/miniconda3/envs/python37 
+</code></pre>
+<h3 id="导出环境">导出环境</h3>
+<p>先进入当前环境，输入命令</p>
+<pre><code class="language-Bash">conda env export &gt; environment.yaml
+</code></pre>
+<p>此命令只导出通过conda install 安装的包，需要导出pip install 安装的包，在终端执行命令</p>
+<pre><code class="language-Bash">pip freeze &gt; requirements.txt 
+</code></pre>
+<h3 id="从导出的-environmentyaml-文件创建环境">从导出的 environment.yaml 文件创建环境</h3>
+<pre><code class="language-Bash">conda create -f environment.yaml -n myenv
+</code></pre>
+<h3 id="pip-删除全部包">pip 删除全部包</h3>
+<pre><code class="language-Bash">pip uninstall -r requirements.txt -y -v
+</code></pre>
+<p>-r 包列表文件， -y 不提示是否删除， -v 输出日志</p>
+<h3 id="conda-删除环境">conda 删除环境</h3>
+<pre><code class="language-Bash">conda env remove -n myenv
+</code></pre>
+<h3 id="解决终端自动激活基本环境base在终端输入">解决终端自动激活基本环境（base），在终端输入</h3>
+<pre><code class="language-Bash">conda config --set auto_activate_base false
+</code></pre>
+<p>如果需要每次都自动激活，在终端输入</p>
+<pre><code class="language-Bash">conda config --set auto_activate_base true
+</code></pre>
+<h3 id="卸载-miniconda">卸载 Miniconda</h3>
+<p>找到 miniconda 的文件夹使用rm命令将它删除</p>
+<pre><code class="language-Bash">#去掉~/.bash_profile环境变量配置
+# added by Miniconda2 installer
+export PATH=&quot;/Users/xy920/miniconda2/bin:$PATH&quot;
+
+#删除miniconda
+rm -rf ~/miniconda3
+
+# 去掉相关隐藏文件
+rm -rf ~/.condarc ~/.conda ~/.continuum 
+</code></pre>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hyper & Fish Shell]]></title>
@@ -62,6 +335,51 @@
 <blockquote>
 <p>Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。</p>
 </blockquote>
+<!-- more -->
+<h3 id="安装">安装</h3>
+<p>请按 <a href="https://hyper.is/">Hyper™官网</a> 或 <a href="https://github.com/vercel/hyper">Hyper github 主页</a> 介绍进行安装。</p>
+<h3 id="主题插件">主题/插件</h3>
+<p>在 <a href="https://hyper.is/">Hyper™官网</a> 可找到喜欢的主题和插件。点开 插件/主题 详情页面，点击右下角的 <code>install</code> 会弹出安装命令，复制命令到 Hyper 执行即可进行安装。</p>
+<h3 id="命令">命令</h3>
+<pre><code class="language-bash"># 安装插件/主题
+hyper i xxx
+# 删除插件/主题
+hyper rm xxx
+</code></pre>
+<h3 id="配置">配置</h3>
+<p>Hyper 所有的配置都在 hyper.js 文件中，包括字体、颜色、插件、shell 等。</p>
+<h4 id="配置窗口半透明">配置窗口半透明</h4>
+<p>找到 <code>backgroundColor</code>那行，改成如下：</p>
+<pre><code>backgroundColor: '#000.0.5',
+# 或者下面这种
+backgroundColor: 'rgba(0,0,0,0.5)', 
+</code></pre>
+<h4 id="支持中文">支持中文</h4>
+<pre><code>env: {LANG:'zh_CN.utf-8'},
+</code></pre>
+<h4 id="切换-shell">切换 Shell</h4>
+<p>Hyper 默认 Shell 为系统默认的 Shell，而 macOS 自 Catalina 版本之后默认的 Shell 是 zsh，因为我个人比较喜欢 Fish Shell，所以我将 Hyper 的默认 Shell 调整为 Fish Shell。找到 shell 那行，修改如下：</p>
+<pre><code class="language-bash">shell: '/usr/local/bin/fish',
+</code></pre>
+<h2 id="fish-shell">Fish Shell</h2>
+<h3 id="简介-2">简介</h3>
+<blockquote>
+<p>Fish 是 &quot;the friendly interactive shell&quot; 的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。</p>
+</blockquote>
+<h3 id="教程">教程</h3>
+<p><a href="https://wiki.archlinux.org/index.php/Fish_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%80%9A%E8%BF%87.bashrc%E5%90%AF%E5%8A%A8fish">fish (简体中文) - ArchWiki</a><br>
+<a href="https://wsq.cool/post/use-fish-shell">新一代命令行工具 - Fish Shell - wsq.cool</a><br>
+<a href="http://www.ruanyifeng.com/blog/2017/05/fish_shell.html">Fish shell 入门教程 - 阮一峰的网络日志</a></p>
+<h3 id="补充">补充</h3>
+<blockquote>
+<p>fish 对 anaconda 的支持或者 anaconda 对 fish 的支持一直不是很友好，都需要做额外的操作才能正常使用，这个额外的操作还随着版本更新一直在变。</p>
+</blockquote>
+<p>解决方案，anaconda 的安装路径中有关于 fish 的解决方案，先在系统默认的终端中找到 anaconda 的安装位置。</p>
+<pre><code class="language-bash">conda info
+</code></pre>
+<p>在给出的 info 中找到 <code>base environment</code> ，我安装的是 miniconda ，base environment 是 <code>/usr/local/miniconda3</code> ，查看 conda.fish 即可找到解决方案。</p>
+<pre><code class="language-bash">more /usr/local/miniconda3/etc/fish/conf.d/conda.fish
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -79,6 +397,20 @@
 <blockquote>
 <p>官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。</p>
 </blockquote>
+<!-- more -->
+<p>如果想用 zsh shell 的话，按终端提示操作即可。如果不想用 zsh shell ，可以先看系统支持的 shell 有哪些。</p>
+<pre><code class="language-bash">more /etc/shells
+</code></pre>
+<p>选一个自己喜欢的，以常见的 bash 为例，先切换到 root 用户</p>
+<pre><code class="language-bash">sudo -s
+</code></pre>
+<p>再将系统默认的 shell 换成 bash</p>
+<pre><code class="language-bash">chsh -s /bin/bash
+</code></pre>
+<p>最后</p>
+<pre><code class="language-bash"> vim ~/.bash_profile
+</code></pre>
+<p>将 <code>export BASH_SILENCE_DEPRECATION_WARNING=1</code> 加在 <code>.bash_profile</code> 文件末尾 ，防止提示再次出现。</p>
 ]]></content>
     </entry>
     <entry>
@@ -87,6 +419,25 @@
         <link href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
         </link>
         <updated>2021-02-25T17:27:06.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="启用现已默认开启无需以下步骤了">启用（现已默认开启，无需以下步骤了）</h2>
+<ol>
+<li>在 Chrome 中访问 <code>chrome://flags/#sharing-qr-code-generator</code></li>
+<li>启用标记 <code>Enable sharing page via QR Code</code></li>
+<li>重启 Chrome 浏览器使生效</li>
+</ol>
+<h2 id="生成">生成</h2>
+<p>生成二维码的两种方式：</p>
+<ol>
+<li>光标定位到页面地址栏，点击 URL 栏中的二维码图标（在收藏图标左边）</li>
+<li>右键菜单中的“为此页面创建二维码”选项</li>
+</ol>
+<h2 id="补充说明">补充说明</h2>
+<ol>
+<li>二维码出现的位置在页面右上角，二维码中心是具有标志性的小恐龙。</li>
+<li>在二维码下方的输入框中也可自行修改 URL，对应的二维码会实时刷新。</li>
+<li>目前 URL 长度限制为 84 个字符。</li>
+</ol>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Chrome 优秀插件推荐「持续更新」]]></title>
@@ -94,6 +445,29 @@
         <link href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
         </link>
         <updated>2021-02-25T06:21:27.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li><a href="https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=zh-CN">Bitwarden - 免费密码管理器 - Chrome 网上应用店</a> 替代LastPass</li>
+<li><a href="https://chrome.google.com/webstore/detail/onetab-plustab-manage-pro/lepdjbhbkpfenckechpdfohdmkhogojf">OneTab Plus:标签效率管理扩展 - Chrome 网上应用店</a> 替代 OneTab</li>
+<li><a href="https://chrome.google.com/webstore/detail/workona-tab-manager/ailcmbgekjpnablpdkmaaccecekgdhlh?hl=zh-CN">Workona Tab Manager - Chrome 网上应用店</a> 管理标签的另一种方式</li>
+<li><a href="https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco">扩展管理器（Extension Manager） - Chrome 网上应用店</a> 比Chrome自带的好用很多</li>
+<li><a href="https://chrome.google.com/webstore/detail/bookmarkie/ahlphbdcaacfhkiajebghpngknafklbj">Bookmarkie - Chrome 网上应用店</a> 简单，漂亮，优雅的弹出书签</li>
+<li><a href="https://chrome.google.com/webstore/detail/quick-bookmark-cleaner/ljfgijlbekebdhniagdekklbmmchhjja">Quick Bookmark Cleaner - Chrome 网上应用店</a> 书签内容的清理和更新工具</li>
+<li><a href="https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh">Infinity 新标签页 (Pro) - Chrome 网上应用店</a> 新标签页自定义</li>
+<li><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey - Chrome 网上应用店</a> 脚本神器</li>
+<li><a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%8A%A9%E6%89%8B/ekpegdfbihlbocepglfimeodnpiohcba?hl=zh-CN">微信读书助手 - Chrome 网上应用店</a> 微信读书助手，浏览公众号、听书、一键组队、导出备份笔记</li>
+<li><a href="https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb">TabCopy - Chrome 网上应用店</a> 以不同的格式快速复制标签页，包括标题和链接</li>
+<li><a href="https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg">AdGuard 广告拦截器 - Chrome 网上应用店</a> 广告拦截</li>
+<li><a href="https://chrome.google.com/webstore/detail/git-master/klmeolbcejnhefkapdchfhlhhjgobhmo">Git Master - Chrome 网上应用店</a> Git 有这一个就够了</li>
+<li><a href="https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg">GitHub加速 - Chrome 网上应用店</a> 效果拔群，谁用谁知道</li>
+<li><a href="https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab?hl=zh-CN">Imagus - Chrome 网上应用店</a> 鼠标指针悬停在链接或缩略图上时直接在当前页面的弹出视图上显示这些图片、HTML5 视频/音频和内容专辑。</li>
+<li><a href="https://chrome.google.com/webstore/detail/wikiwand-wikipedia-modern/emffkefkbkpkgpdeeooapgaicgmcbolj?hl=zh-CN">Wikiwand: Wikipedia Modernized - Chrome 网上应用店</a> 美化维基百科页面</li>
+<li><a href="https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm">YouTube™双字幕 - Chrome 网上应用店</a> 用起来最省心</li>
+<li><a href="https://chrome.google.com/webstore/detail/captube-dual-captions-for/hbhkmnepjaoiamapfdbhpkjendeeegbb">CapTube (Dual Captions for YouTube) - Chrome 网上应用店</a> YouTube 双字幕，自定义程度更高</li>
+<li><a href="https://chrome.google.com/webstore/detail/qr-code/cbimgpnbgalffiohilfglgkkhpegpjlo">QR码生成与识别 - Chrome 网上应用店</a> 简单好用</li>
+<li><a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa">JSON Formatter - Chrome 网上应用店</a> JSON格式化</li>
+<li><a href="https://chrome.google.com/webstore/detail/print-friendly-pdf/ohlencieiipommannpdfcmfdpjjmeolj">Print Friendly &amp; PDF - Chrome 网上应用店</a> 打印时自动优化网页上的内容</li>
+</ol>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac 免费效率软件推荐「持续更新」]]></title>
@@ -101,5 +475,33 @@
         <link href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
         </link>
         <updated>2021-02-24T16:54:22.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li><a href="https://clipy-app.com/">Clipy-适用于macOS的剪贴板扩展程序</a> 简洁好用的剪切板工具</li>
+<li><a href="https://theunarchiver.com/">The Unarchiver | Top Free Unarchiving Software for macOS</a> mac下最简洁的压缩软件</li>
+<li><a href="https://ezip.awehunt.com/">MacZip - 专为 macOS 而设计的压缩软件！</a> 可以预览压缩包内容</li>
+<li><a href="https://rectangleapp.com/">Rectangle</a> 分屏</li>
+<li><a href="https://ripperhe.gitee.io/bob/#/">Bob</a> 划词翻译，输入翻译，截屏翻译</li>
+<li><a href="https://spacelauncherapp.com/">SpaceLauncher - App Launcher and Switcher for Mac</a> 快捷切换应用</li>
+<li><a href="https://electerm.github.io/electerm/">electerm</a> 支持 Windows / macOS / Linux的 <code>ssh/sftp</code> 客户端</li>
+<li><a href="https://www.better365.cn/FlyKey.html">键指如飞/FlyKey</a> 快捷键提示</li>
+<li><a href="https://www.better365.cn/ishot.html">iShot</a> 截图、长截图、贴图、标注、取色、录屏</li>
+<li><a href="https://www.intelliscapesolutions.com/apps/caffeine">Caffeine</a> 防止 mac 休眠</li>
+<li><a href="https://motrix.app/zh-CN">Motrix</a>  一款全能的下载工具</li>
+<li><a href="https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12">‎Mac App Store 上的“Hidden Bar”</a> 菜单栏图标隐藏工具</li>
+<li><a href="https://github.com/MarnoDev/EyeSaver">EyeSaver: A macOS App that reminds us to protect our eyes</a> 每20分钟提示休息，保护眼睛</li>
+<li><a href="https://iina.io/">IINA - The modern media player for macOS</a> 外观好看，功能优秀的视频播放器</li>
+<li><a href="https://webtorrent.io/">WebTorrent - Streaming browser torrent client</a> 电影种子可以边下边播</li>
+<li><a href="https://marktext.app/">Mark Text</a> markdown 写作，感觉比 <a href="https://typora.io/">Typora — a markdown editor, markdown reader.</a> 在功能上还要好用一点</li>
+<li><a href="https://lemon.qq.com/">腾讯柠檬清理 - 全新Mac清理工具，实时了解Mac系统状况</a></li>
+<li><a href="https://iterm2.com/">iTerm2 - macOS Terminal Replacement</a> 很强劲的终端，和<code>zsh shell</code> + <code>oh-my-zsh</code> 搭配，功能和美观兼具。</li>
+<li><a href="https://hyper.is/">Hyper™</a> 新一代终端，目前最好看的终端工具，插件同样丰富。颜值即正义！</li>
+<li><a href="https://github.com/qier222/YesPlayMusic#%EF%B8%8F-%E5%AE%89%E8%A3%85">YesPlayMusic: 高颜值的第三方网易云播放器，支持 Windows / macOS / Linux</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients">Remote Desktop clients | Microsoft Docs</a> 微软远程桌面远程控制工具。远程控制与访问 Windows 操作系统。</li>
+<li><a href="https://mounty.app/">Mounty for NTFS</a> 小巧免费的 NTFS 读写工具</li>
+<li><a href="https://www.hapigo.com/">HapiGo - 高效启动器</a> 国产的 Alfred 替代品，大部分功能免费</li>
+<li><a href="https://picx.xpoet.cn/">PicX-GitHub图床</a> PicX，基于 GitHub API 开发的图床管理神器，图片外链使用 jsDelivr 进行 CDN 加速。免下载、免安装，只需一个 GitHub 账号，打开 PicX 官网即可进行配置使用，轻松解决图床难题。</li>
+<li><a href="https://sparkmailapp.com/zh">Spark</a> 超好用的邮件客户端工具，设置一个主账户之后，所有邮箱可以同步配置。</li>
+</ol>
+]]></content>
     </entry>
 </feed>
