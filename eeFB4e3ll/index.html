@@ -1,62 +1,362 @@
-<!DOCTYPE html>
+<html>
+
 <head>
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="我不知将去向何方，但我已在路上。"><meta charset="UTF-8"><title>shell | MakeItClear</title>
-<link href="https://mkitclear.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://mkitclear.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://mkitclear.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
-  
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>shell | MakeItClear</title>
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
+<link rel="apple-touch-icon" href="https://mkitclear.github.io/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="XiaoX 博客">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<!-- iconfont -->
+<link href="https://at.alicdn.com/t/font_2463772_e2doyz0d1wv.css" rel="stylesheet" />
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+  <style>
+    #vcomments {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
-<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://mkitclear.github.io"><img alt="logo" style="display:inline-block;" src="https://mkitclear.github.io/images/avatar.png"/></a><h1 title="MakeItClear" class="weaklink"><a  href="/">MakeItClear</a></h1>
+  <div class="main">
+    <div class="main-content">
+      <div class="nav-bar">
+  <!-- 首页菜单 -->
+  <div class="menu-container">
+    <a href="https://mkitclear.github.io/index.html" target="_parent" class="home">
+      <svg class="home-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+        <path fill="#fff"
+          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+        </path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+        </path>
+      </svg>
+      <span class="home-title">Home</span>
+    </a>
 
-<div class="navbar weaklink">
-<div class="normal_nav">
-<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
-<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
-<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
-<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1619425317200" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-</div></div>
-<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+    <div class="nav-menu">
+      
+      
+      <a href="/" class="menu">
+        首页
+      </a>
+      
+      
+      
+      <a href="/archives" class="menu">
+        归档
+      </a>
+      
+      
+      
+      <a href="/tags" class="menu">
+        标签
+      </a>
+      
+      
+      
+      <a href="/post/about" class="menu">
+        关于
+      </a>
+      
+      
 
-<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div><div class="post_list" >
 
-<div class="post">
 
-<div class="post_title weaklink"><h2><a href="https://mkitclear.github.io/9ScV2bPdL/">Fish Shell 设置 python3 为默认版本</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p></p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2021-03-07</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://mkitclear.github.io/eeFB4e3ll/"class="tag">shell</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">81字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">1 min read</span></section>
-</div></div>
+      <a href="https://mkitclear.github.io/atom.xml" target="_blank" class="rss">
+        <span class="rss-title">RSS</span>
+        <i class="iconfont icon-rss"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
-<div class="post">
+      <div class="site-header">
+  <!-- 首页头像 -->
+  <div class="site-avatar">
+    <a href="https://mkitclear.github.io">
+      <img class="avatar" src="https://mkitclear.github.io/images/avatar.png?v=1619427373765" alt="">
+    </a>
+  </div>
+  <!-- 首页标题 -->
+  <h1 class="site-title">
+    MakeItClear
+  </h1>
+  <!-- 首页描述 -->
+  <p class="site-description">
+    我不知将去向何方，但我已在路上。
+  </p>
+  <!-- 社交软件 -->
+  <div class="social-container">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
 
-<div class="post_title weaklink"><h2><a href="https://mkitclear.github.io/hyper-and-fish-shell/">Hyper &amp; Fish Shell</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h2 id="hyper">Hyper</h2>
+      <div class="current-tag-container">
+        <div class="tags">
+          <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+            </path>
+          </svg>
+          <span class="title">
+            shell
+          </span>
+        </div>
+      </div>
+      <div class="post-container">
+
+  
+  <div class="article">
+    
+    <div class="post-tag">
+      <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+        </path>
+      </svg>
+      <a href="https://mkitclear.github.io/eeFB4e3ll/" class="tag">
+        shell
+      </a>
+    </div>
+    
+
+    <article class="post">
+      <div class="post-left">
+        <div class="post-head">
+          
+          <a class="title" href="https://mkitclear.github.io/9ScV2bPdL/">
+            <h2 class="post-title">Fish Shell 设置 python3 为默认版本</h2>
+          </a>
+        </div>
+        <div class="post-abstract">
+          
+        </div>
+        <div class="post-info">
+          <svg class="post-date" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <time class="post-time">
+            2021-03-07
+          </time>
+          <svg fill="none" class="view-icon" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+            </path>
+          </svg>
+          <span id="/9ScV2bPdL/" class="leancloud_visitors" data-flag-title="Fish Shell 设置 python3 为默认版本">
+            <span class="leancloud-visitors-count"></span><span> 次阅读</span>
+          </span>
+          <span>
+            1 min read
+          </span>
+        </div>
+      </div>
+      
+    </article>
+  </div>
+  
+  <div class="article">
+    
+    <div class="post-tag">
+      <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+        </path>
+      </svg>
+      <a href="https://mkitclear.github.io/eeFB4e3ll/" class="tag">
+        shell
+      </a>
+    </div>
+    
+    <div class="post-tag">
+      <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+        </path>
+      </svg>
+      <a href="https://mkitclear.github.io/BSj-bGKCQF/" class="tag">
+        terminal
+      </a>
+    </div>
+    
+
+    <article class="post">
+      <div class="post-left">
+        <div class="post-head">
+          
+          <a class="title" href="https://mkitclear.github.io/hyper-and-fish-shell/">
+            <h2 class="post-title">Hyper &amp; Fish Shell</h2>
+          </a>
+        </div>
+        <div class="post-abstract">
+          <h2 id="hyper">Hyper</h2>
 <h3 id="简介">简介</h3>
 <blockquote>
 <p>Hyper 是一个基于 JS/HTML/CSS 的终端(Terminal)，类似于 macOS 自带的 terminal，但是具有更高的可塑性以及更漂亮的外观。目前还比较小众，反应速度略慢。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2021-02-28</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://mkitclear.github.io/eeFB4e3ll/"class="tag">shell</a>| <a href="https://mkitclear.github.io/BSj-bGKCQF/"class="tag">terminal</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">509字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">3 min read</span></section>
-</div></div>
 
-<div class="post">
+        </div>
+        <div class="post-info">
+          <svg class="post-date" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <time class="post-time">
+            2021-02-28
+          </time>
+          <svg fill="none" class="view-icon" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+            </path>
+          </svg>
+          <span id="/hyper-and-fish-shell/" class="leancloud_visitors" data-flag-title="Hyper &amp; Fish Shell">
+            <span class="leancloud-visitors-count"></span><span> 次阅读</span>
+          </span>
+          <span>
+            3 min read
+          </span>
+        </div>
+      </div>
+      
+    </article>
+  </div>
+  
+  <div class="article">
+    
+    <div class="post-tag">
+      <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+        </path>
+      </svg>
+      <a href="https://mkitclear.github.io/eeFB4e3ll/" class="tag">
+        shell
+      </a>
+    </div>
+    
+    <div class="post-tag">
+      <svg class="tag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 7h.01M7 3h5a1.99 1.99 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+        </path>
+      </svg>
+      <a href="https://mkitclear.github.io/BSj-bGKCQF/" class="tag">
+        terminal
+      </a>
+    </div>
+    
 
-<div class="post_title weaklink"><h2><a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">Mac 终端提示: The default interactive shell is now zsh.</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
+    <article class="post">
+      <div class="post-left">
+        <div class="post-head">
+          
+          <a class="title" href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
+            <h2 class="post-title">Mac 终端提示: The default interactive shell is now zsh.</h2>
+          </a>
+        </div>
+        <div class="post-abstract">
+          <p><a href="https://support.apple.com/zh-cn/HT208050">在 Mac 上将 zsh 用作默认 Shell - Apple 支持</a></p>
 <blockquote>
 <p>官网提到，从 macOS Catalina 版开始， Mac 将使用 zsh 作为默认登录 Shell 和交互式 Shell。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2021-02-28</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://mkitclear.github.io/eeFB4e3ll/"class="tag">shell</a>| <a href="https://mkitclear.github.io/BSj-bGKCQF/"class="tag">terminal</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">142字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">1 min read</span></section>
-</div></div>
-	
-<div class="round-shape-one"></div><div class="paginator pager pagination"><div style="clear:both;height:0;"></div></div></div></div></div></div>
-<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://mkitclear.github.io" style="margin:0;">MakeItClear</a>.</div>
-<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>20</strong> posts</span></div></div>
+
+        </div>
+        <div class="post-info">
+          <svg class="post-date" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <time class="post-time">
+            2021-02-28
+          </time>
+          <svg fill="none" class="view-icon" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+            </path>
+          </svg>
+          <span id="/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/" class="leancloud_visitors" data-flag-title="Mac 终端提示: The default interactive shell is now zsh.">
+            <span class="leancloud-visitors-count"></span><span> 次阅读</span>
+          </span>
+          <span>
+            1 min read
+          </span>
+        </div>
+      </div>
+      
+    </article>
+  </div>
+  
+</div>
+      <div class="pagination-container">
+  
+  
+</div>
+      <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <b>Theme: </b>
+  <a href="https://github.com/chiperman/gridea-theme-porky" target="_blank" title="Porky">
+    <span><b>Porky</b></span>
+  </a>
+  <b>. Powered by </b>
+  <a href="https://gridea.dev/" target="_blank" title="Gridea">
+    <span><b>Gridea</b></span>
+  </a>
+</div>
+
 <script>
-console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+  hljs.initHighlightingOnLoad()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+      <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+
+<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: '',
+		appKey: '',
+		avatar: '',
+		visitor: true,
+		
+	});
+</script>
+    </div>
+  </div>
 </body>
+
 </html>

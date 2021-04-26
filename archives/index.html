@@ -1,36 +1,399 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="我不知将去向何方，但我已在路上。"><meta charset="UTF-8"><title>Archives | MakeItClear</title>
-<link href="https://mkitclear.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://mkitclear.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://mkitclear.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MakeItClear</title>
+<link rel="shortcut icon" href="https://mkitclear.github.io/favicon.ico">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://mkitclear.github.io/styles/main.css">
+<link rel="apple-touch-icon" href="https://mkitclear.github.io/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="XiaoX 博客">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<!-- iconfont -->
+<link href="https://at.alicdn.com/t/font_2463772_e2doyz0d1wv.css" rel="stylesheet" />
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
 
 </head>
+
 <body>
-<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
-<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://mkitclear.github.io"><img alt="logo" style="display:inline-block;" src="https://mkitclear.github.io/images/avatar.png"/></a><h1 title="MakeItClear" class="weaklink"><a  href="/">MakeItClear</a></h1>
+  <div class="main">
+    <div class="main-content">
+      <div class="nav-bar">
+  <!-- 首页菜单 -->
+  <div class="menu-container">
+    <a href="https://mkitclear.github.io/index.html" target="_parent" class="home">
+      <svg class="home-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+        <path fill="#fff"
+          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+        </path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+        </path>
+      </svg>
+      <span class="home-title">Home</span>
+    </a>
 
-<div class="navbar weaklink">
-<div class="normal_nav">
-<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul></nav>
-<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
-<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
-<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1619425317200" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-</div></div>
-<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+    <div class="nav-menu">
+      
+      
+      <a href="/" class="menu">
+        首页
+      </a>
+      
+      
+      
+      <a href="/archives" class="menu">
+        归档
+      </a>
+      
+      
+      
+      <a href="/tags" class="menu">
+        标签
+      </a>
+      
+      
+      
+      <a href="/post/about" class="menu">
+        关于
+      </a>
+      
+      
 
-<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div>
 
 
-<div class="list_with_title"><div class="listing_title">2021</div><div class="listing"><div class="listing-item"><div class="listing_post"><a href="https://mkitclear.github.io/9ScV2bPdL/"title="Fish Shell 设置 python3 为默认版本">Fish Shell 设置 python3 为默认版本</a><div class="post_date"><span class="date">2021-03-07</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/ZVg06MJ7i/"title="Homebrew 安装及更新软件">Homebrew 安装及更新软件</a><div class="post_date"><span class="date">2021-03-03</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/"title="FastJson 对象、JSON、字符串、Map 之间的互转">FastJson 对象、JSON、字符串、Map 之间的互转</a><div class="post_date"><span class="date">2021-03-02</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/"title="Mac 安装配置Mysql">Mac 安装配置Mysql</a><div class="post_date"><span class="date">2021-03-02</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/"title="Mac 安装配置 Miniconda">Mac 安装配置 Miniconda</a><div class="post_date"><span class="date">2021-03-02</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/hyper-and-fish-shell/"title="Hyper &amp; Fish Shell">Hyper &amp; Fish Shell</a><div class="post_date"><span class="date">2021-02-28</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/"title="Mac 终端提示: The default interactive shell is now zsh.">Mac 终端提示: The default interactive shell is now zsh.</a><div class="post_date"><span class="date">2021-02-28</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/"title="Chrome 内置二维码功能">Chrome 内置二维码功能</a><div class="post_date"><span class="date">2021-02-26</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/"title="Chrome 优秀插件推荐「持续更新」">Chrome 优秀插件推荐「持续更新」</a><div class="post_date"><span class="date">2021-02-25</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/"title="Mac 免费效率软件推荐「持续更新」">Mac 免费效率软件推荐「持续更新」</a><div class="post_date"><span class="date">2021-02-25</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/"title="为什么要努力读书？">为什么要努力读书？</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/xie-cao-guan-li-fa/"title="血槽管理法">血槽管理法</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/chang-jian-mian-shi-wen-ti-hui-da-ji-qiao-fei-ji-zhu-zhuan/"title="常见面试问题回答技巧（非技术）「转」">常见面试问题回答技巧（非技术）「转」</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/you-yang-yun-dong-he-wu-yang-yun-dong/"title="有氧运动和无氧运动">有氧运动和无氧运动</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/hao-kan-zhao-pian-de-shi-jue-gan-shou/"title="好看照片的视觉感受">好看照片的视觉感受</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/shi-me-shi-hao-zhao-pian/"title="什么是好照片">什么是好照片</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/huan-gong-zuo-xiao-tips/"title="换工作小tips">换工作小tips</a><div class="post_date"><span class="date">2021-02-09</span></div></div><div class="listing_post"><a href="https://mkitclear.github.io/git-xue-xi-bi-ji/"title="Git 学习笔记">Git 学习笔记</a><div class="post_date"><span class="date">2021-02-08</span></div></div></div><br></div>
-<div class="list_with_title"><div class="listing_title">2018</div><div class="listing"><div class="listing-item"><div class="listing_post"><a href="https://mkitclear.github.io/hello-gridea/"title="Hello Gridea">Hello Gridea</a><div class="post_date"><span class="date">2018-12-12</span></div></div></div><br></div></div><div style="width:100%;overflow:hidden">
-</div></div></div></div>
-<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://mkitclear.github.io" style="margin:0;">MakeItClear</a>.</div>
-<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>20</strong> posts</span></div></div>
+      <a href="https://mkitclear.github.io/atom.xml" target="_blank" class="rss">
+        <span class="rss-title">RSS</span>
+        <i class="iconfont icon-rss"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      <div class="site-header">
+  <!-- 首页头像 -->
+  <div class="site-avatar">
+    <a href="https://mkitclear.github.io">
+      <img class="avatar" src="https://mkitclear.github.io/images/avatar.png?v=1619427373765" alt="">
+    </a>
+  </div>
+  <!-- 首页标题 -->
+  <h1 class="site-title">
+    MakeItClear
+  </h1>
+  <!-- 首页描述 -->
+  <p class="site-description">
+    我不知将去向何方，但我已在路上。
+  </p>
+  <!-- 社交软件 -->
+  <div class="social-container">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+      
+
+<div class="archives-container">
+  
+  <h2 class="year">2021</h2>
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/9ScV2bPdL/">
+      <h2 class="post-title">
+        Fish Shell 设置 python3 为默认版本
+        <small>2021-03-07</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/ZVg06MJ7i/">
+      <h2 class="post-title">
+        Homebrew 安装及更新软件
+        <small>2021-03-03</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/fastjson-dui-xiang-jsonzi-fu-chuan-map-zhi-jian-de-hu-zhuan/">
+      <h2 class="post-title">
+        FastJson 对象、JSON、字符串、Map 之间的互转
+        <small>2021-03-02</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-mysql/">
+      <h2 class="post-title">
+        Mac 安装配置Mysql
+        <small>2021-03-02</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/mac-an-zhuang-pei-zhi-miniconda/">
+      <h2 class="post-title">
+        Mac 安装配置 Miniconda
+        <small>2021-03-02</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/hyper-and-fish-shell/">
+      <h2 class="post-title">
+        Hyper &amp; Fish Shell
+        <small>2021-02-28</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/mac-zhong-duan-ti-shi-the-default-interactive-shell-is-now-zsh/">
+      <h2 class="post-title">
+        Mac 终端提示: The default interactive shell is now zsh.
+        <small>2021-02-28</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/chrome-nei-zhi-er-wei-ma-gong-neng/">
+      <h2 class="post-title">
+        Chrome 内置二维码功能
+        <small>2021-02-26</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/chrome-you-xiu-cha-jian-chi-xu-geng-xin/">
+      <h2 class="post-title">
+        Chrome 优秀插件推荐「持续更新」
+        <small>2021-02-25</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/mac-mian-fei-xiao-lu-ruan-jian-tui-jian/">
+      <h2 class="post-title">
+        Mac 免费效率软件推荐「持续更新」
+        <small>2021-02-25</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/wei-shi-me-yao-nu-li-du-shu/">
+      <h2 class="post-title">
+        为什么要努力读书？
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/xie-cao-guan-li-fa/">
+      <h2 class="post-title">
+        血槽管理法
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/chang-jian-mian-shi-wen-ti-hui-da-ji-qiao-fei-ji-zhu-zhuan/">
+      <h2 class="post-title">
+        常见面试问题回答技巧（非技术）「转」
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/you-yang-yun-dong-he-wu-yang-yun-dong/">
+      <h2 class="post-title">
+        有氧运动和无氧运动
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/hao-kan-zhao-pian-de-shi-jue-gan-shou/">
+      <h2 class="post-title">
+        好看照片的视觉感受
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/shi-me-shi-hao-zhao-pian/">
+      <h2 class="post-title">
+        什么是好照片
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/huan-gong-zuo-xiao-tips/">
+      <h2 class="post-title">
+        换工作小tips
+        <small>2021-02-09</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/git-xue-xi-bi-ji/">
+      <h2 class="post-title">
+        Git 学习笔记
+        <small>2021-02-08</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+  
+  
+  <h2 class="year">2018</h2>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="post">
+    <a href="https://mkitclear.github.io/hello-gridea/">
+      <h2 class="post-title">
+        Hello Gridea
+        <small>2018-12-12</small>
+      </h2>
+    </a>
+  </article>
+  
+  
+  
+</div>
+
+      <div class="pagination-container">
+  
+  
+</div>
+
+      <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <b>Theme: </b>
+  <a href="https://github.com/chiperman/gridea-theme-porky" target="_blank" title="Porky">
+    <span><b>Porky</b></span>
+  </a>
+  <b>. Powered by </b>
+  <a href="https://gridea.dev/" target="_blank" title="Gridea">
+    <span><b>Gridea</b></span>
+  </a>
+</div>
+
 <script>
-console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+  hljs.initHighlightingOnLoad()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+    </div>
+  </div>
 </body>
+
 </html>
